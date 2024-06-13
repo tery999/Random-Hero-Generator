@@ -1,4 +1,4 @@
-import { character } from "../InformationObjects/worldView";
+
 
 export type origin = "Футарк" | "Огам" | "Сирильско краище" | "Латинае" 
 | "Орхонг" | "Хабилеа" | "";
