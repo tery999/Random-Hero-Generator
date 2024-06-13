@@ -53,7 +53,7 @@ export function Complex() {
     // reset name every time origin changes
     useEffect(() => {
         setNarativeStats((prev) => ({ ...prev, name: "" }))
-    }, [narativeStats.origin])
+    }, [narativeStats.origin , narativeStats.gender])
 
     return (
         <div className="container">
