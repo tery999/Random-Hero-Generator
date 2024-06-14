@@ -8,8 +8,10 @@ import { ageGenerator, appearanceGeneratorFunc, bodyTypesGenerator, featuresGene
 import { aimsGenerator, callingGenerator, characterGenerator, concernsGenerator } from "../../functions/worldViewGenerator"
 import { familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
 import { mechStatGenerator } from "../../functions/mechStatGenerator"
+import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
 
 export default function Quick() {
+    const [reroll, setReroll] = useState<boolean>(false);
     const [heroStats, setHeroStats] = useState<QuickHero>({
         gender: "",
         origin: "",
@@ -77,11 +79,16 @@ export default function Quick() {
                 character, calling, aims, concerns
             }, familyAndRelationships , mechanicalStats
         }))
-    }, [])
+    }, [reroll])
+
+    const rerollFunc = () => {
+        setReroll( prev => !prev)
+    };
 
     return (
         <div className="container quick">
             <Link className="backLink" to="/">Назад</Link>
+            <img className="dice" src={dice} alt="" onClick={rerollFunc} />
             <div className="containerInfo">
                 <div>
                     <h2>Наративни характеристики</h2>

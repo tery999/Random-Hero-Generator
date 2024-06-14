@@ -24,7 +24,7 @@
     margin: 10px;
 }
 
-.containerInfo > div {
+.containerInfo>div {
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
@@ -35,23 +35,38 @@
     box-shadow: inset 0px 0px 11px -2px rgba(138, 46, 0, 0.812);
 }
 
-.containerInfo > div > h2 {
+.containerInfo>div>h2 {
     align-self: center;
     text-align: center;
 }
 
-.backLink{
- text-decoration: none;
- font-size: 22px;
- color: black;
- font-weight: bold;
+.backLink {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
 
 }
 
-.backLink:hover{
+.backLink:hover {
     text-decoration: none;
     font-size: 22px;
     color: rgb(187, 43, 43);
     font-weight: bold;
-   
-   }
+
+}
+
+.dice {
+    height: 60px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.dice:hover {
+    filter: drop-shadow(0 0 0.5rem rgb(255, 214, 30));
+    height: 70px;
+    margin-bottom: 0px;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
