@@ -80,8 +80,8 @@ export default function Quick() {
     }, [])
 
     return (
-        <div className="container">
-            <Link to="/">Назад</Link>
+        <div className="container quick">
+            <Link className="backLink" to="/">Назад</Link>
             <div className="containerInfo">
                 <div>
                     <h2>Наративни характеристики</h2>

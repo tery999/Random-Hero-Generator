@@ -6,26 +6,52 @@
     gap: 15px;
 }
 
+.quick {
+    background-image: url("../../../public/antique-scroll-backgrounds.jpg");
+    height: 100%;
+    background-size: cover;
+    padding-top: 10px;
+}
+
 .containerInfo {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
+    font-size: 18px;
     gap: 15px;
+    margin: 10px;
 }
 
 .containerInfo > div {
     width: 300px;
     padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: 2px solid black;
+    box-shadow: inset 0px 0px 11px -2px rgba(138, 46, 0, 0.812);
 }
 
 .containerInfo > div > h2 {
     align-self: center;
     text-align: center;
 }
+
+.backLink{
+ text-decoration: none;
+ font-size: 22px;
+ color: black;
+ font-weight: bold;
+
+}
+
+.backLink:hover{
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(187, 43, 43);
+    font-weight: bold;
+   
+   }
