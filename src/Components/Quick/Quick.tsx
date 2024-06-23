@@ -55,8 +55,7 @@ export default function Quick() {
 
         }
     })
-
-    console.log("Mechstat is", heroStats)
+    const [disadvantages, setDisadvantages] = useState("");
 
     useEffect(() => {
         const genderGen = genderGenerator();
@@ -107,6 +106,10 @@ export default function Quick() {
 
         const familyFieldOld = {...heroStats.familyAndRelationships};
         familyFieldOld.difficultiesAndAchievements = newDiffAch;
+
+        if (statName === "strength" || statName === "ability") {
+            
+        }
         setHeroStats((prev) => ({ ...prev, mechanicalStats: mechStatOld , familyAndRelationships: familyFieldOld }));
     }
 
