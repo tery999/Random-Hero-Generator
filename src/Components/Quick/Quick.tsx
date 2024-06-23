@@ -6,8 +6,8 @@ import { genderGenerator, originGenerator, societyGenerator } from "../../functi
 import { nameGenerator } from "../../functions/nameGeneratorFunc"
 import { ageGenerator, appearanceGeneratorFunc, bodyTypesGenerator, featuresGenerator } from "../../functions/appearanceGenerator"
 import { aimsGenerator, callingGenerator, characterGenerator, concernsGenerator } from "../../functions/worldViewGenerator"
-import { familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
-import { mechSingleStats, mechStatGenerator } from "../../functions/mechStatGenerator"
+import { DiffAndAch, familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
+import { mechSingleStats, mechStatGenerator, mechStatLowHigh } from "../../functions/mechStatGenerator"
 import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
 
 export default function Quick() {
@@ -56,6 +56,8 @@ export default function Quick() {
         }
     })
 
+    console.log("Mechstat is", heroStats)
+
     useEffect(() => {
         const genderGen = genderGenerator();
         const origin = originGenerator("quick");
@@ -85,9 +87,10 @@ export default function Quick() {
         setReroll(prev => !prev)
     };
 
-    const singleStatReroll = (statName:"strength"|"confidence"|"ability"|"perception") => {
+    const singleStatReroll = (statName: "strength" | "confidence" | "ability" | "perception") => {
+        debugger;
         const newValueRoll = mechSingleStats();
-        const mechStatOld = {...heroStats.mechanicalStats};
+        const mechStatOld = { ...heroStats.mechanicalStats };
         if (statName === "strength") {
             mechStatOld.strength = newValueRoll;
         } else if (statName === "confidence") {
@@ -97,7 +100,14 @@ export default function Quick() {
         } else if (statName === "perception") {
             mechStatOld.perception = newValueRoll;
         }
-        setHeroStats( (prev) => ({...prev, mechStatOld}))
+
+        //need to change Difficulties and Achievements, if the highest and lowest value change
+        const [low, high] = mechStatLowHigh(mechStatOld);
+        const newDiffAch = DiffAndAch(low, high);
+
+        const familyFieldOld = {...heroStats.familyAndRelationships};
+        familyFieldOld.difficultiesAndAchievements = newDiffAch;
+        setHeroStats((prev) => ({ ...prev, mechanicalStats: mechStatOld , familyAndRelationships: familyFieldOld }));
     }
 
     return (
@@ -145,10 +155,22 @@ export default function Quick() {
                 </div>
                 <div>
                     <h2>Механични измерения</h2>
-                    <p> Крепкост: {heroStats.mechanicalStats.strength}</p>
-                    <p> Увереност: {heroStats.mechanicalStats.confidence}</p>
-                    <p> Способност: {heroStats.mechanicalStats.ability}</p>
-                    <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
+                    <div className="singleStatHolder">
+                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("strength")} />
+                        <p> Крепкост: {heroStats.mechanicalStats.strength}</p>
+                    </div>
+                    <div className="singleStatHolder">
+                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("confidence")} />
+                        <p> Увереност: {heroStats.mechanicalStats.confidence}</p>
+                    </div>
+                    <div className="singleStatHolder">
+                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("ability")} />
+                        <p> Способност: {heroStats.mechanicalStats.ability}</p>
+                    </div>
+                    <div className="singleStatHolder">
+                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("perception")} />
+                        <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
+                    </div>
                 </div>
                 <div>
                     <h2>Недостатъци</h2>

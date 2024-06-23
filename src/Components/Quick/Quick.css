@@ -70,3 +70,19 @@
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
 }
+
+.singleStatHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.diceSm {
+    height: 40px;
+    cursor: pointer;
+}
+
+.diceSm:hover {
+    height: 42px;
+}
