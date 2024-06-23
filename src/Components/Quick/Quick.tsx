@@ -1,13 +1,13 @@
 import "./Quick.css"
 import { useEffect, useState } from "react"
-import { QuickHero, body } from "../../Interfaces/QuickHero"
+import { QuickHero, body, mechanicStats } from "../../Interfaces/QuickHero"
 import { Link } from "react-router-dom"
 import { genderGenerator, originGenerator, societyGenerator } from "../../functions/GeneratorFunc"
 import { nameGenerator } from "../../functions/nameGeneratorFunc"
 import { ageGenerator, appearanceGeneratorFunc, bodyTypesGenerator, featuresGenerator } from "../../functions/appearanceGenerator"
 import { aimsGenerator, callingGenerator, characterGenerator, concernsGenerator } from "../../functions/worldViewGenerator"
 import { familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
-import { mechStatGenerator } from "../../functions/mechStatGenerator"
+import { mechSingleStats, mechStatGenerator } from "../../functions/mechStatGenerator"
 import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
 
 export default function Quick() {
@@ -69,7 +69,7 @@ export default function Quick() {
         const calling = callingGenerator();
         const aims = aimsGenerator();
         const concerns = concernsGenerator();
-        const mechanicalStats = mechStatGenerator();
+        const mechanicalStats = mechStatGenerator() as mechanicStats;
         const familyAndRelationships = familyAndRelationshipsCombined(age, mechanicalStats);
         setHeroStats((prev) => ({
             ...prev, gender: genderGen, origin: origin,
@@ -77,13 +77,28 @@ export default function Quick() {
             features: features, body: body,
             worldView: {
                 character, calling, aims, concerns
-            }, familyAndRelationships , mechanicalStats
+            }, familyAndRelationships, mechanicalStats
         }))
     }, [reroll])
 
     const rerollFunc = () => {
-        setReroll( prev => !prev)
+        setReroll(prev => !prev)
     };
+
+    const singleStatReroll = (statName:"strength"|"confidence"|"ability"|"perception") => {
+        const newValueRoll = mechSingleStats();
+        const mechStatOld = {...heroStats.mechanicalStats};
+        if (statName === "strength") {
+            mechStatOld.strength = newValueRoll;
+        } else if (statName === "confidence") {
+            mechStatOld.confidence = newValueRoll;
+        } else if (statName === "ability") {
+            mechStatOld.ability = newValueRoll;
+        } else if (statName === "perception") {
+            mechStatOld.perception = newValueRoll;
+        }
+        setHeroStats( (prev) => ({...prev, mechStatOld}))
+    }
 
     return (
         <div className="container quick">
@@ -135,16 +150,10 @@ export default function Quick() {
                     <p> Способност: {heroStats.mechanicalStats.ability}</p>
                     <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
                 </div>
+                <div>
+                    <h2>Недостатъци</h2>
+                </div>
             </div>
-            {/* surrounding: string,
-    wealth: string,
-    familyReputation: string,
-    // family: string,
-    siblings: string,
-    relationshipStatus: relationshipStatus
-    // ownReputation: string,
-    // friendship: string,
-    // enemies: string */}
         </div>
     )
 }
