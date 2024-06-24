@@ -9,6 +9,7 @@ import { aimsGenerator, callingGenerator, characterGenerator, concernsGenerator 
 import { DiffAndAch, familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
 import { mechSingleStats, mechStatGenerator, mechStatLowHigh } from "../../functions/mechStatGenerator"
 import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
+import { nedostataciFunc, nedostataciInterface } from "../../functions/disadvantageGenerator"
 
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
@@ -55,7 +56,7 @@ export default function Quick() {
 
         }
     })
-    const [disadvantages, setDisadvantages] = useState("");
+    const [disadvantages, setDisadvantages] = useState<nedostataciInterface[]>([]);
 
     useEffect(() => {
         const genderGen = genderGenerator();
@@ -108,6 +109,19 @@ export default function Quick() {
         familyFieldOld.difficultiesAndAchievements = newDiffAch;
 
         if (statName === "strength" || statName === "ability") {
+            debugger;
+            const disadvantage = nedostataciFunc();
+            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
+            const filtered = newDisArr.filter ( (el) => {
+                return el.name === disadvantage.name
+            })
+
+            if (filtered.length > 0) {
+                filtered[0].level += 1;
+                setDisadvantages( newDisArr);
+            } else {
+                setDisadvantages( (prev) => [...prev, disadvantage]);
+            }
             
         }
         setHeroStats((prev) => ({ ...prev, mechanicalStats: mechStatOld , familyAndRelationships: familyFieldOld }));
@@ -177,6 +191,9 @@ export default function Quick() {
                 </div>
                 <div>
                     <h2>Недостатъци</h2>
+                    { disadvantages.map( (single) => 
+                    <p>{single.name} {single.level}: {single.information}</p>
+                    )}
                 </div>
             </div>
         </div>

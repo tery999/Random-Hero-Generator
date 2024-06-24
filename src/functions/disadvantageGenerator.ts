@@ -1,7 +1,7 @@
 import { physicalNedostataci } from "../Interfaces/nedostataci";
 import { diceRollFunction } from "./utils"
 
-interface nedostataciInterface {
+export interface nedostataciInterface {
     name: string,
     information: physicalNedostataci | "",
     level: number
