@@ -9,7 +9,7 @@ import { aimsGenerator, callingGenerator, characterGenerator, concernsGenerator 
 import { DiffAndAch, familyAndRelationshipsCombined } from "../../functions/familyRelationshipsGenerator"
 import { mechSingleStats, mechStatGenerator, mechStatLowHigh } from "../../functions/mechStatGenerator"
 import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
-import { nedostataciFunc, nedostataciInterface } from "../../functions/disadvantageGenerator"
+import { nedostataciInterface, nedostataciMentalFunc, nedostataciPhysicalFunc } from "../../functions/disadvantageGenerator"
 
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
@@ -110,7 +110,22 @@ export default function Quick() {
 
         if (statName === "strength" || statName === "ability") {
             debugger;
-            const disadvantage = nedostataciFunc();
+            const disadvantage = nedostataciPhysicalFunc();
+            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
+            const filtered = newDisArr.filter ( (el) => {
+                return el.name === disadvantage.name
+            })
+
+            if (filtered.length > 0) {
+                filtered[0].level += 1;
+                setDisadvantages( newDisArr);
+            } else {
+                setDisadvantages( (prev) => [...prev, disadvantage]);
+            }
+            
+        } else  if (statName === "confidence" || statName === "perception") {
+            debugger;
+            const disadvantage = nedostataciMentalFunc();
             const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
             const filtered = newDisArr.filter ( (el) => {
                 return el.name === disadvantage.name
