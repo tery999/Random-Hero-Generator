@@ -11,6 +11,7 @@ import { WorldviewComplex } from "./SubComplexes/WorldviewComplex"
 import { FamilyNRelationshipComplex } from "./SubComplexes/FamilyNRelationshipComplex"
 import { MechStatsComplex } from "./SubComplexes/MechStatsComplex"
 import { MechStatNames } from "../../functions/mechStatGenerator"
+import { DisadvantagesComplex } from "./SubComplexes/DIsadvantagesComplex"
 
 
 export function Complex() {
@@ -40,6 +41,19 @@ export function Complex() {
     const [mechLowHigh, setMechLowHigh] = useState<MechStatNames[]>([]);
     const changeMechLowHigh = useCallback( (changedData: MechStatNames[]) => {
         setMechLowHigh(changedData)
+    },[])
+
+    //user for disadvantagesComp, which relies on rerolls from MechStatComplex
+    const [numberOfDisadvantagesPhysic, setNumberOfDisadvantagesPhysic] = useState(0);
+    const [numberOfDisadvantagesMental, setNumberOfDisadvantagesMental] = useState(0);
+    console.log("DISADVANTAGES COUNT", numberOfDisadvantagesMental , numberOfDisadvantagesPhysic)
+    const changenumberOfDisadvantages = useCallback( (disadvantage:"mental"|"physical") => {
+        debugger;
+        if (disadvantage === "mental") {
+            setNumberOfDisadvantagesMental((prev) => prev+1)
+        } else {
+            setNumberOfDisadvantagesPhysic((prev) => prev+1)
+        }
     },[])
 
 
@@ -72,9 +86,11 @@ export function Complex() {
 
             <WorldviewComplex />
 
-            <MechStatsComplex changeMechLowHigh={changeMechLowHigh} />
+            <MechStatsComplex changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
 
             <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} />
+
+            <DisadvantagesComplex numberOfDisadvantagesPhysic={numberOfDisadvantagesPhysic} numberOfDisadvantagesMental={numberOfDisadvantagesMental}  />
         </div>
     )
 }
