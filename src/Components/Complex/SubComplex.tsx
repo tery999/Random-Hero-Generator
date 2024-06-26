@@ -11,7 +11,7 @@ export interface prop {
 }
 
 export function SubComplexFunc(props: prop) {
-    debugger;
+    // debugger;
 
     const name = props.name;
     const stat = props.stat
@@ -32,8 +32,8 @@ export function SubComplexFunc(props: prop) {
         }
     }
 
-    // console.log("CHECK RERENDERING");
-    // console.log("IN", key)
+    console.log("CHECK RERENDERING");
+    console.log("IN", key)
 
     return (
         <>

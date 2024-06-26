@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PhysicalSpecialtiesEnum, PhysicalSpecialtiesInt } from "../../Interfaces/specialties";
 
 
-export function PhysicalSpecialtiesComp(props:any) {
+export function PhysicalSpecialtiesFunc(props: any) {
     //minimize it, only used for reset
-    const initialState:PhysicalSpecialtiesInt = {
+    const initialState: PhysicalSpecialtiesInt = {
         Акробатика: {
             name: "Акробатика",
             information: PhysicalSpecialtiesEnum.Акробатика,
@@ -96,8 +96,9 @@ export function PhysicalSpecialtiesComp(props:any) {
             points: 0
         }
     };
-
+    console.log("Specialities check");
     const reroll = props.reroll;
+    const abilityProp = props.abilityProp;
     const [totalPoints, setTotalPoints] = useState(0);
     const [specialties, setSpecialties] = useState<PhysicalSpecialtiesInt>({
         Акробатика: {
@@ -192,42 +193,58 @@ export function PhysicalSpecialtiesComp(props:any) {
         }
     })
 
-    useEffect( ()=> {
+    useEffect(() => {
         setSpecialties(initialState);
-    },[reroll])
+    }, [reroll])
 
-    const changeStatFunc = (key:keyof typeof specialties) => {
+    const changeStatFunc = (key: keyof typeof specialties, direction: "inc" | "dec") => {
         //does deep copy
         const newValues = structuredClone(specialties);
-        newValues[key].points += 1;
-        setSpecialties ( (prev) => ({...prev, [key]:newValues[key]}))
+        if (direction === "inc") {
+            newValues[key].points += 1;
+            setTotalPoints( (prev) => prev +1)
+        } else if (direction === "dec") {
+            if (newValues[key].points == 0) {
+                return
+            }
+            newValues[key].points -= 1;
+            setTotalPoints( (prev) => prev -1)
+        }
+        
+        setSpecialties((prev) => ({ ...prev, [key]: newValues[key] }))
     }
 
     console.log("SPEC ARE", specialties)
     return (
         <div>
             <h2>Физически Специалности</h2>
+            <h4 className="specialtyPoints">{totalPoints} / {abilityProp}</h4>
             <div className="singleSpecHolder">
                 <p>{specialties.Акробатика.name}</p>
                 <div>
+                    <div onClick={() => changeStatFunc("Акробатика", "dec")}>-</div>
                     <p>{specialties.Акробатика.points}</p>
-                    <div onClick={()=>changeStatFunc("Акробатика")}>+</div>
+                    <div onClick={() => changeStatFunc("Акробатика", "inc")}>+</div>
                 </div>
             </div>
             <div className="singleSpecHolder">
                 <p>{specialties.Бивакуване.name}</p>
                 <div>
+                    <div onClick={() => changeStatFunc("Бивакуване", "dec")}>-</div>
                     <p>{specialties.Бивакуване.points}</p>
-                    <div onClick={()=>changeStatFunc("Бивакуване")}>+</div>
+                    <div onClick={() => changeStatFunc("Бивакуване", "inc")}>+</div>
                 </div>
             </div>
             <div className="singleSpecHolder">
                 <p>{specialties.Езда.name}</p>
                 <div>
+                    <div onClick={() => changeStatFunc("Езда", "dec")}>-</div>
                     <p>{specialties.Езда.points}</p>
-                    <div onClick={()=>changeStatFunc("Езда")}>+</div>
+                    <div onClick={() => changeStatFunc("Езда", "inc")}>+</div>
                 </div>
             </div>
         </div>
     )
 }
+
+export const PhysicalSpecialtiesComp = React.memo(PhysicalSpecialtiesFunc);

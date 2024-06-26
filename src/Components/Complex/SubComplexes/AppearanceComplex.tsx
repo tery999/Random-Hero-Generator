@@ -5,7 +5,7 @@ import { ageGenerator, bodyTypesGenerator, colorGenerator, featuresGenerator, ha
 import {  age, origin } from "../../../Interfaces/QuickHero";
 
 export function AppearanceComplexFunction(props:any) {
-    debugger;
+    // debugger;
     const gender:"мъж" | "жена" | "" = props.gender;
     const origin:origin = props.origin;
     const age:age = props.age;

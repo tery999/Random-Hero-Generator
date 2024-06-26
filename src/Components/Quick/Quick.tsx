@@ -112,7 +112,7 @@ export default function Quick() {
         familyFieldOld.difficultiesAndAchievements = newDiffAch;
 
         if (statName === "strength" || statName === "ability") {
-            debugger;
+            // debugger;
             const disadvantage = nedostataciPhysicalFunc();
             const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
             const filtered = newDisArr.filter ( (el) => {
@@ -127,7 +127,7 @@ export default function Quick() {
             }
             
         } else  if (statName === "confidence" || statName === "perception") {
-            debugger;
+            // debugger;
             const disadvantage = nedostataciMentalFunc();
             const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
             const filtered = newDisArr.filter ( (el) => {
@@ -213,7 +213,7 @@ export default function Quick() {
                     <p>{single.name} {single.level}: {single.information}</p>
                     )}
                 </div>
-                <PhysicalSpecialtiesComp reroll={reroll}/>
+                <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability}/>
             </div>
         </div>
     )

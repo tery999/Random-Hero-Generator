@@ -625,7 +625,7 @@ export function rumorGenerator(): string {
 }
 
 export function DiffAndAch(low: MechStatNames, high: MechStatNames): string {
-    debugger;
+    // debugger;
     const lowHighArr: MechStatNames[] = [low, high];
     let DiffAchString = "";
 
