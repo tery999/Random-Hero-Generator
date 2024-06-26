@@ -213,7 +213,7 @@ export default function Quick() {
                     <p>{single.name} {single.level}: {single.information}</p>
                     )}
                 </div>
-                <PhysicalSpecialtiesComp/>
+                <PhysicalSpecialtiesComp reroll={reroll}/>
             </div>
         </div>
     )

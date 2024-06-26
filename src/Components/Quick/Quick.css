@@ -86,3 +86,15 @@
 .diceSm:hover {
     height: 42px;
 }
+
+.singleSpecHolder {
+    display: flex;
+    gap: 15px;
+}
+
+.singleSpecHolder > div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}

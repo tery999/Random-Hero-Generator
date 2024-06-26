@@ -1,34 +1,23 @@
-const arr = [
-    {
-        name: "first",
-        information: "firstInfo",
-        level: 1
+const objtest = {
+    Акробатика: {
+        name: "Акробатика",
+        information: "hi",
+        points: 0
     },
-    {
-        name: "second",
-        information: "secInfo",
-        level: 1
+    Бивакуване: {
+        name: "Бивакуване",
+        information: "hi2",
+        points: 0
     },
-    {
-        name: "third",
-        information: "thirdInfo",
-        level: 1
-    },
-    {
-        name: "forth",
-        information: "fourthInfo",
-        level: 1
+    Езда: {
+        name: "Езда",
+        information: "hi3",
+        points: 0
     }
-]
+}
 
-const copy = arr.map(obj => ({...obj}));
+const copy = structuredClone(objtest);
+copy.Акробатика.information = "hehehe";
 
-const filtered = copy.filter ( (el) => {
-    return el.name === "third"
-})
-
-filtered[0].level += 1;
-
-console.log(filtered);
-console.log(arr);
+console.log(objtest);
 console.log(copy);
