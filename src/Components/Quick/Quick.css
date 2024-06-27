@@ -94,9 +94,26 @@
 
 .singleSpecHolder > div {
     display: flex;
-    gap: 15px;
     justify-content: center;
     align-items: center;
+}
+
+.points {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.singleSpecHolder img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.singleSpecHolder img:hover {
+    width: 24px;
+}
+
+.singleSpecHolder img:hover + .points {
+    margin-left: 4px;
 }
 
 .specialtyPoints {
