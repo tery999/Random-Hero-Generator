@@ -10,7 +10,8 @@ import { DiffAndAch, familyAndRelationshipsCombined } from "../../functions/fami
 import { mechSingleStats, mechStatGenerator, mechStatLowHigh } from "../../functions/mechStatGenerator"
 import dice from "../../../public/441965163_472462378601661_2030822002986090823_n.png"
 import { nedostataciInterface, nedostataciMentalFunc, nedostataciPhysicalFunc } from "../../functions/disadvantageGenerator"
-import { PhysicalSpecialtiesComp } from "./Specialties"
+import { PhysicalSpecialtiesComp } from "./PhysicalSpecialties"
+import { MentalSpecialtiesComp } from "./MentalSpecialties"
 
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
@@ -214,6 +215,7 @@ export default function Quick() {
                     )}
                 </div>
                 <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability}/>
+                <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception}/>
             </div>
         </div>
     )

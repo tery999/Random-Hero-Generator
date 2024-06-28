@@ -1,6 +1,6 @@
 const objtest = {
     Акробатика: {
-        name: "Акробатика",
+        name: "АкробатикаМнооЯко",
         information: "hi",
         points: 0
     },
@@ -16,8 +16,4 @@ const objtest = {
     }
 }
 
-const copy = structuredClone(objtest);
-copy.Акробатика.information = "hehehe";
 
-console.log(objtest);
-console.log(copy);

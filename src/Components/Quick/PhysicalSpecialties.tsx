@@ -248,7 +248,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
                 </div>
             </div>
             <div className="singleSpecHolder">
-                <p>{specialties.ЕдноръчниРъкопашниОръжия.name}</p>
+                <p>Едноръчни Ръкопашни Оръжия</p>
                 <div>
                     <img onClick={() => changeStatFunc("ЕдноръчниРъкопашниОръжия", "dec")} src="/arrowLeft.png" alt="" />
                     <p className="points">{specialties.ЕдноръчниРъкопашниОръжия.points}</p>
@@ -312,7 +312,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
                 </div>
             </div>
             <div className="singleSpecHolder">
-                <p>{specialties.ДвуръчниРъкопашниОръжия.name}</p>
+                <p>Двуръчни Ръкопашни Оръжия</p>
                 <div>
                     <img onClick={() => changeStatFunc("ДвуръчниРъкопашниОръжия", "dec")} src="/arrowLeft.png" alt="" />
                     <p className="points">{specialties.ДвуръчниРъкопашниОръжия.points}</p>
@@ -320,7 +320,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
                 </div>
             </div>
             <div className="singleSpecHolder">
-                <p>{specialties.СелскоСтопанство.name}</p>
+                <p>Селско Стопанство</p>
                 <div>
                     <img onClick={() => changeStatFunc("СелскоСтопанство", "dec")} src="/arrowLeft.png" alt="" />
                     <p className="points">{specialties.СелскоСтопанство.points}</p>
