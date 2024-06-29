@@ -12,6 +12,7 @@ import dice from "../../../public/441965163_472462378601661_2030822002986090823_
 import { nedostataciInterface, nedostataciMentalFunc, nedostataciPhysicalFunc } from "../../functions/disadvantageGenerator"
 import { PhysicalSpecialtiesComp } from "./PhysicalSpecialties"
 import { MentalSpecialtiesComp } from "./MentalSpecialties"
+import { EquipmentComponent } from "./Equipment"
 
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
@@ -216,6 +217,8 @@ export default function Quick() {
                 </div>
                 <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability}/>
                 <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception}/>
+                <EquipmentComponent reroll={reroll}/>
+            
             </div>
         </div>
     )
