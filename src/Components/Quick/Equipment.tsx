@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { diceRollFunction, diceRollFunctionZero } from "../../functions/utils";
 import { Equipment, EquipmentInt } from "../../InformationObjects/Equipment";
+import { SubEquipment } from "./SubEquipment";
 
-export function EquipmentComponent (props:any) {
+export function EquipmentComponentFunc (props:any) {
     const reroll = props.reroll;
     const [currentEquipment, setCurrentEquipment] = useState<EquipmentInt[]>();
+    
 
     useEffect( ()=> {
         const equipmentNumber = diceRollFunction(9);
@@ -20,13 +22,13 @@ export function EquipmentComponent (props:any) {
     },[reroll])
 
     return (
-        <div>
+        <div className="equipmentDiv">
             <h2>Предмети</h2>
             { currentEquipment?.map( (eq) => {
-               return <div>
-                <p>{eq.Name}</p>
-               </div>
+               return <SubEquipment eq={eq}/>
             })}
         </div>
     )
 }
+
+export const EquipmentComponent = React.memo(EquipmentComponentFunc);

@@ -123,3 +123,37 @@
     margin-top: -10px;
     margin-bottom: 5px;
 }
+
+.equipmentDiv {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionMark {
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    padding: 10px;
+    bottom: 8px;
+    font-size: 30px;
+    color: rgb(106, 103, 103);
+}
+
+.hiddenEquipment {
+    display: none;
+}
+
+.questionMark:hover ~ .hiddenEquipment {
+    padding-left: 10px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    bottom: 50px;
+    width: 280px;
+    background-color: aliceblue;
+    font-size: 15px;
+}
