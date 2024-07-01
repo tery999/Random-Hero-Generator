@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'Olietta';
+    src: url("../public/fonts/6110-font.ttf");
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Olietta';
 }
