@@ -14,6 +14,8 @@ import { PhysicalSpecialtiesComp } from "./PhysicalSpecialties"
 import { MentalSpecialtiesComp } from "./MentalSpecialties"
 import { EquipmentComponent } from "./Equipment"
 
+//COPY IN CASE I SCREW THE NEW CSS
+
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
     const [heroStats, setHeroStats] = useState<QuickHero>({

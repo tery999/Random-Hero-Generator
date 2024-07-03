@@ -11,7 +11,20 @@
     height: 100%;
     background-size: cover;
     padding-top: 10px;
+    padding-bottom: 20px;
     background-attachment: fixed;
+}
+
+.ParentContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.DownloadPfdButton {
+    position: absolute;
+    bottom: -15px;
+
 }
 
 .containerInfo {
@@ -39,6 +52,11 @@
 .containerInfo>div>h2 {
     align-self: center;
     text-align: center;
+}
+
+.containerInfo>div>p {
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .backLink {
