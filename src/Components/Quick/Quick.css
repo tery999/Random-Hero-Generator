@@ -37,7 +37,42 @@
     margin: 10px;
 }
 
-.containerInfo>div {
+.firstRow {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    padding: 50px;
+}
+
+.cornerDec {
+    position: absolute;
+    width: 120px;
+}
+
+.cornerDec.upRight{
+    right: 0px;
+    top: 0px;
+}
+
+.cornerDec.upLeft{
+    left: 0px;
+    top: 0px;
+}
+
+.cornerDec.downLeft{
+    left: 0px;
+    bottom: 0px;
+}
+
+.cornerDec.downRight{
+    right: 0px;
+    bottom: 0px;
+}
+
+.statsDiv {
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
@@ -45,8 +80,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    box-shadow: inset 0px 0px 11px -2px rgba(138, 46, 0, 0.812);
+    /* box-shadow: inset 0px 0px 11px -2px rgba(138, 46, 0, 0.812); */
     font-size: 24px;
+}
+
+.statsDiv h2 {
+    align-self: center;
+    text-align: center;
 }
 
 .containerInfo>div>h2 {

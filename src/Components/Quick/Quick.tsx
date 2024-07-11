@@ -112,41 +112,41 @@ export default function Quick() {
         const [low, high] = mechStatLowHigh(mechStatOld);
         const newDiffAch = DiffAndAch(low, high);
 
-        const familyFieldOld = {...heroStats.familyAndRelationships};
+        const familyFieldOld = { ...heroStats.familyAndRelationships };
         familyFieldOld.difficultiesAndAchievements = newDiffAch;
 
         if (statName === "strength" || statName === "ability") {
             // debugger;
             const disadvantage = nedostataciPhysicalFunc();
-            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
-            const filtered = newDisArr.filter ( (el) => {
+            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({ ...obj }));
+            const filtered = newDisArr.filter((el) => {
                 return el.name === disadvantage.name
             })
 
             if (filtered.length > 0) {
                 filtered[0].level += 1;
-                setDisadvantages( newDisArr);
+                setDisadvantages(newDisArr);
             } else {
-                setDisadvantages( (prev) => [...prev, disadvantage]);
+                setDisadvantages((prev) => [...prev, disadvantage]);
             }
-            
-        } else  if (statName === "confidence" || statName === "perception") {
+
+        } else if (statName === "confidence" || statName === "perception") {
             // debugger;
             const disadvantage = nedostataciMentalFunc();
-            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({...obj}));
-            const filtered = newDisArr.filter ( (el) => {
+            const newDisArr: nedostataciInterface[] = disadvantages.map(obj => ({ ...obj }));
+            const filtered = newDisArr.filter((el) => {
                 return el.name === disadvantage.name
             })
 
             if (filtered.length > 0) {
                 filtered[0].level += 1;
-                setDisadvantages( newDisArr);
+                setDisadvantages(newDisArr);
             } else {
-                setDisadvantages( (prev) => [...prev, disadvantage]);
+                setDisadvantages((prev) => [...prev, disadvantage]);
             }
-            
+
         }
-        setHeroStats((prev) => ({ ...prev, mechanicalStats: mechStatOld , familyAndRelationships: familyFieldOld }));
+        setHeroStats((prev) => ({ ...prev, mechanicalStats: mechStatOld, familyAndRelationships: familyFieldOld }));
     }
 
     return (
@@ -154,29 +154,35 @@ export default function Quick() {
             <Link className="backLink" to="/">Назад</Link>
             <img className="dice" src={dice} alt="" onClick={rerollFunc} />
             <div className="containerInfo">
-                <div>
-                    <h2>Наративни характеристики</h2>
-                    <p> Пол: {heroStats.gender}</p>
-                    <p> Произход: {heroStats.origin}</p>
-                    <p> Общество: {heroStats.society}</p>
-                    <p> Име: {heroStats.name}</p>
-                </div>
-                <div>
-                    <h2>Външност</h2>
-                    <p> Възраст: {heroStats.age}</p>
-                    <p> Тен: {heroStats.appearance.color}</p>
-                    <p> Коса: {heroStats.appearance.hair}</p>
-                    <p> Очи: {heroStats.appearance.eyes}</p>
-                    <p> Отличителни белези: {heroStats.features}</p>
-                    <p>Ръст: {heroStats.body.height}</p>
-                    <p>Форма: {heroStats.body.shape}</p>
-                </div>
-                <div>
-                    <h2>Мироглед</h2>
-                    <p> Нрав: {heroStats.worldView.character}</p>
-                    <p> Призвание: {heroStats.worldView.calling}</p>
-                    <p> Цели: {heroStats.worldView.aims}</p>
-                    <p> Опасения: {heroStats.worldView.concerns}</p>
+                <div className="firstRow">
+                    <img className="cornerDec upLeft"  src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight"  src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft"  src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight"  src="/CornerDecorationDownRight.png" alt="" />
+                    <div className="statsDiv">
+                        <h2>Наративни характеристики</h2>
+                        <p> Пол: {heroStats.gender}</p>
+                        <p> Произход: {heroStats.origin}</p>
+                        <p> Общество: {heroStats.society}</p>
+                        <p> Име: {heroStats.name}</p>
+                    </div>
+                    <div className="statsDiv">
+                        <h2>Външност</h2>
+                        <p> Възраст: {heroStats.age}</p>
+                        <p> Тен: {heroStats.appearance.color}</p>
+                        <p> Коса: {heroStats.appearance.hair}</p>
+                        <p> Очи: {heroStats.appearance.eyes}</p>
+                        <p> Отличителни белези: {heroStats.features}</p>
+                        <p>Ръст: {heroStats.body.height}</p>
+                        <p>Форма: {heroStats.body.shape}</p>
+                    </div>
+                    <div className="statsDiv">
+                        <h2>Мироглед</h2>
+                        <p> Нрав: {heroStats.worldView.character}</p>
+                        <p> Призвание: {heroStats.worldView.calling}</p>
+                        <p> Цели: {heroStats.worldView.aims}</p>
+                        <p> Опасения: {heroStats.worldView.concerns}</p>
+                    </div>
                 </div>
                 <div>
                     <h2>Среда и положение</h2>
@@ -213,14 +219,14 @@ export default function Quick() {
                 </div>
                 <div>
                     <h2>Недостатъци</h2>
-                    { disadvantages.map( (single) => 
-                    <p>{single.name} {single.level}: {single.information}</p>
+                    {disadvantages.map((single) =>
+                        <p>{single.name} {single.level}: {single.information}</p>
                     )}
                 </div>
-                <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability}/>
-                <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception}/>
-                <EquipmentComponent reroll={reroll}/>
-            
+                <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability} />
+                <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception} />
+                <EquipmentComponent reroll={reroll} />
+
             </div>
         </div>
     )
