@@ -155,10 +155,10 @@ export default function Quick() {
             <img className="dice" src={dice} alt="" onClick={rerollFunc} />
             <div className="containerInfo">
                 <div className="firstRow">
-                    <img className="cornerDec upLeft"  src="/CornerDecorationUpLeft.png" alt="" />
-                    <img className="cornerDec upRight"  src="/CornerDecorationUpRight.png" alt="" />
-                    <img className="cornerDec downLeft"  src="/CornerDecorationDownLeft.png" alt="" />
-                    <img className="cornerDec downRight"  src="/CornerDecorationDownRight.png" alt="" />
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <div className="statsDiv">
                         <h2>Наративни характеристики</h2>
                         <p> Пол: {heroStats.gender}</p>
@@ -184,19 +184,21 @@ export default function Quick() {
                         <p> Опасения: {heroStats.worldView.concerns}</p>
                     </div>
                 </div>
-                <div>
-                    <h2>Среда и положение</h2>
-                    <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
-                    <p> Положение: {heroStats.familyAndRelationships.wealth}</p>
-                    <p> Род: {heroStats.familyAndRelationships.familyReputation}</p>
-                    <p> Семейство: {heroStats.familyAndRelationships.family}</p>
-                    <p> Братя и сестри: {heroStats.familyAndRelationships.siblings}</p>
-                    <p> Семейно положение: {heroStats.familyAndRelationships.relationshipStatus}</p>
-                    <p> Очаквания и репутация: {heroStats.familyAndRelationships.ownReputation}</p>
-                    <p> Приятелства: {heroStats.familyAndRelationships.friendship}</p>
-                    <p> Вражди: {heroStats.familyAndRelationships.enemies}</p>
-                    <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
-                    <p> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
+                <div className="secondRow">
+                    <div >
+                        <h2>Среда и положение</h2>
+                        <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
+                        <p> Положение: {heroStats.familyAndRelationships.wealth}</p>
+                        <p> Род: {heroStats.familyAndRelationships.familyReputation}</p>
+                        <p> Семейство: {heroStats.familyAndRelationships.family}</p>
+                        <p> Братя и сестри: {heroStats.familyAndRelationships.siblings}</p>
+                        <p> Семейно положение: {heroStats.familyAndRelationships.relationshipStatus}</p>
+                        <p> Очаквания и репутация: {heroStats.familyAndRelationships.ownReputation}</p>
+                        <p> Приятелства: {heroStats.familyAndRelationships.friendship}</p>
+                        <p> Вражди: {heroStats.familyAndRelationships.enemies}</p>
+                        <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
+                        <p> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
+                    </div>
                 </div>
                 <div>
                     <h2>Механични измерения</h2>

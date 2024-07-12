@@ -7,8 +7,8 @@
 }
 
 .quick {
-    background-image: url("../../../public/antique-scroll-backgrounds.jpg");
     height: 100%;
+    width: 100%;
     background-size: cover;
     padding-top: 10px;
     padding-bottom: 20px;
@@ -19,6 +19,9 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-image: url("../../../public/antique-scroll-backgrounds.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .DownloadPfdButton {
@@ -29,12 +32,13 @@
 
 .containerInfo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 15px;
     margin: 10px;
+    font-size: 24px;
 }
 
 .firstRow {
@@ -44,7 +48,19 @@
     justify-content: center;
     align-items: start;
     border: 2px solid black;
-    padding: 50px;
+    padding: 30px;
+}
+
+.secondRow {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    padding: 30px;
+    max-width: 1023px;
 }
 
 .cornerDec {
@@ -74,6 +90,7 @@
 
 .statsDiv {
     width: 300px;
+    max-width: 300px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -98,6 +115,7 @@
     margin-bottom: 15px;
     margin-top: 0px;
 }
+
 
 .backLink {
     text-decoration: none;
@@ -184,6 +202,7 @@
 
 .equipmentDiv {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
