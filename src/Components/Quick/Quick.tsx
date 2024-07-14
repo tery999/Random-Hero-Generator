@@ -185,6 +185,10 @@ export default function Quick() {
                     </div>
                 </div>
                 <div className="secondRow">
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <div >
                         <h2>Среда и положение</h2>
                         <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
@@ -197,35 +201,43 @@ export default function Quick() {
                         <p> Приятелства: {heroStats.familyAndRelationships.friendship}</p>
                         <p> Вражди: {heroStats.familyAndRelationships.enemies}</p>
                         <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
-                        <p> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
+                        <p className="TrudnostiIPostijeniqP"> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
                     </div>
                 </div>
-                <div>
-                    <h2>Механични измерения</h2>
-                    <div className="singleStatHolder">
-                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("strength")} />
-                        <p> Крепкост: {heroStats.mechanicalStats.strength}</p>
+                <div className="thirdRow">
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
+                    <div className="mehanichniStatHolder">
+                        <h2>Механични измерения</h2>
+                        <div className="singleStatHolder">
+                            <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("strength")} />
+                            <p> Крепкост: {heroStats.mechanicalStats.strength}</p>
+                        </div>
+                        <div className="singleStatHolder">
+                            <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("confidence")} />
+                            <p> Увереност: {heroStats.mechanicalStats.confidence}</p>
+                        </div>
+                        <div className="singleStatHolder">
+                            <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("ability")} />
+                            <p> Способност: {heroStats.mechanicalStats.ability}</p>
+                        </div>
+                        <div className="singleStatHolder">
+                            <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("perception")} />
+                            <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
+                        </div>
                     </div>
-                    <div className="singleStatHolder">
-                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("confidence")} />
-                        <p> Увереност: {heroStats.mechanicalStats.confidence}</p>
-                    </div>
-                    <div className="singleStatHolder">
-                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("ability")} />
-                        <p> Способност: {heroStats.mechanicalStats.ability}</p>
-                    </div>
-                    <div className="singleStatHolder">
-                        <img className="diceSm" src={dice} alt="" onClick={() => singleStatReroll("perception")} />
-                        <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
+                    <div className="nedostataciHolder">
+                        <h2>Недостатъци</h2>
+                        {disadvantages.map((single) =>
+                            <p>{single.name} {single.level}: {single.information}</p>
+                        )}
                     </div>
                 </div>
-                <div>
-                    <h2>Недостатъци</h2>
-                    {disadvantages.map((single) =>
-                        <p>{single.name} {single.level}: {single.information}</p>
-                    )}
+                <div className="forthRow">
+                    <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability} />
                 </div>
-                <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability} />
                 <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception} />
                 <EquipmentComponent reroll={reroll} />
 

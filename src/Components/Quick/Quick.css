@@ -59,8 +59,59 @@
     justify-content: center;
     align-items: start;
     border: 2px solid black;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
     max-width: 1023px;
+}
+
+.thirdRow {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    width: 1023px;
+    max-width: 1023px;
+}
+
+.forthRow {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    width: 1023px;
+    max-width: 1023px;
+}
+
+.mehanichniStatHolder {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.nedostataciHolder {
+    width: 600px;
+}
+
+.TrudnostiIPostijeniqP {
+    padding-left: 20px;
 }
 
 .cornerDec {
@@ -89,8 +140,8 @@
 }
 
 .statsDiv {
-    width: 300px;
-    max-width: 300px;
+    width: 320px;
+    box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -101,15 +152,11 @@
     font-size: 24px;
 }
 
-.statsDiv h2 {
+ h2 {
     align-self: center;
     text-align: center;
 }
 
-.containerInfo>div>h2 {
-    align-self: center;
-    text-align: center;
-}
 
 .containerInfo>div>p {
     margin-bottom: 15px;
@@ -196,8 +243,14 @@
 .specialtyPoints {
     display: flex;
     align-self: center;
+    text-align: center;
     margin-top: -10px;
     margin-bottom: 5px;
+}
+
+.PhysicalSpecialtiesStatHolder {
+    display: flex;
+    flex-direction: column;
 }
 
 .equipmentDiv {

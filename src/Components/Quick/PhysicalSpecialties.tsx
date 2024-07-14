@@ -220,7 +220,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
 
     console.log("SPEC ARE", specialties)
     return (
-        <div>
+        <div className="PhysicalSpecialtiesStatHolder">
             <h2>Физически Специалности</h2>
             <h4 className="specialtyPoints">{totalPoints} / {abilityProp}</h4>
             <div className="singleSpecHolder">
