@@ -189,7 +189,7 @@ export default function Quick() {
                     <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
                     <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
                     <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
-                    <div >
+                    <div className="sredaIpolojenieHolder">
                         <h2>Среда и положение</h2>
                         <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
                         <p> Положение: {heroStats.familyAndRelationships.wealth}</p>
@@ -236,6 +236,10 @@ export default function Quick() {
                     </div>
                 </div>
                 <div className="forthRow">
+                <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability} />
                 </div>
                 <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception} />

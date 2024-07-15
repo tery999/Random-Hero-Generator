@@ -70,6 +70,7 @@
     box-sizing: border-box;
     position: relative;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
@@ -78,8 +79,7 @@
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 30px;
-    width: 1023px;
-    max-width: 1023px;
+   width: 100%;
 }
 
 .forthRow {
@@ -94,8 +94,7 @@
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 30px;
-    width: 1023px;
-    max-width: 1023px;
+    width: 100%;
 }
 
 .mehanichniStatHolder {
@@ -107,7 +106,11 @@
 }
 
 .nedostataciHolder {
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 1 600px;
+    max-width: 600px;
 }
 
 .TrudnostiIPostijeniqP {
@@ -214,6 +217,8 @@
 .singleSpecHolder {
     display: flex;
     gap: 15px;
+    padding-right: 20px;
+    justify-content: space-between;
 }
 
 .singleSpecHolder > div {
@@ -221,6 +226,10 @@
     justify-content: center;
     align-items: center;
 }
+
+/* .singleSpecHolder p {
+    width: 100%;
+} */
 
 .points {
     margin-left: 8px;
@@ -240,6 +249,12 @@
     margin-left: 4px;
 }
 
+.sredaIpolojenieHolder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .specialtyPoints {
     display: flex;
     align-self: center;
@@ -251,6 +266,25 @@
 .PhysicalSpecialtiesStatHolder {
     display: flex;
     flex-direction: column;
+}
+
+.PhysicalSpecialtiesStatHolder p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.PhysicalBothRows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+}
+
+.PhysicalBothRows > div {
+    width: 320px;
 }
 
 .equipmentDiv {
