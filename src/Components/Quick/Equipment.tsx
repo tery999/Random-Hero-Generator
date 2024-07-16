@@ -24,9 +24,11 @@ export function EquipmentComponentFunc (props:any) {
     return (
         <div className="equipmentDiv">
             <h2>Предмети</h2>
+            <div className="allEquipment">
             { currentEquipment?.map( (eq) => {
                return <SubEquipment eq={eq}/>
             })}
+            </div>
         </div>
     )
 }

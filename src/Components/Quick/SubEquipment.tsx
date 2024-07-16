@@ -5,7 +5,7 @@ export function SubEquipment(props: any) {
     console.log("check rendering sub equipment");
     const eq = props.eq as EquipmentInt;
     return (
-        <div className="equipmentDiv">
+        <div className="equipmentDivSingle">
             <p className="questionMark"> ? </p>
             <p>{eq.Name}</p>
 

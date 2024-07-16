@@ -7,11 +7,10 @@
 }
 
 .quick {
-    height: 100%;
     width: 100%;
     background-size: cover;
     padding-top: 10px;
-    padding-bottom: 20px;
+    margin-bottom: 80px;
     background-attachment: fixed;
 }
 
@@ -26,7 +25,7 @@
 
 .DownloadPfdButton {
     position: absolute;
-    bottom: -15px;
+    bottom: 15px;
 
 }
 
@@ -95,6 +94,22 @@
     padding-left: 50px;
     padding-right: 30px;
     width: 100%;
+}
+
+.fifthRow , .sixthRow{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 1023px;
 }
 
 .mehanichniStatHolder {
@@ -263,17 +278,17 @@
     margin-bottom: 5px;
 }
 
-.PhysicalSpecialtiesStatHolder {
+.PhysicalSpecialtiesStatHolder, .MentalSpecialtiesStatHolder {
     display: flex;
     flex-direction: column;
 }
 
-.PhysicalSpecialtiesStatHolder p {
+.PhysicalSpecialtiesStatHolder p ,.MentalSpecialtiesStatHolder p {
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.PhysicalBothRows {
+.PhysicalBothRows , .MentalBothRows {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -283,16 +298,32 @@
 
 }
 
-.PhysicalBothRows > div {
+.PhysicalBothRows > div ,.MentalBothRows > div {
     width: 320px;
 }
 
 .equipmentDiv {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
+    max-width: 1023px;
+}
+
+.allEquipment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.equipmentDivSingle {
+    display: flex;
+    position: relative;
+
 }
 
 .questionMark {
@@ -301,7 +332,8 @@
     margin-bottom: 2px;
     position: relative;
     padding: 10px;
-    bottom: 8px;
+    left: 5px;
+    right: 5px;
     font-size: 30px;
     color: rgb(106, 103, 103);
 }
@@ -316,8 +348,8 @@
     position: absolute;
     z-index: 2;
     left: 10px;
-    bottom: 50px;
+    bottom: 70px;
     width: 280px;
     background-color: aliceblue;
-    font-size: 15px;
+    font-size: 18px;
 }

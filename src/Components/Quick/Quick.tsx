@@ -236,14 +236,26 @@ export default function Quick() {
                     </div>
                 </div>
                 <div className="forthRow">
-                <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
                     <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
                     <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
                     <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <PhysicalSpecialtiesComp reroll={reroll} abilityProp={heroStats.mechanicalStats.ability} />
                 </div>
-                <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception} />
-                <EquipmentComponent reroll={reroll} />
+                <div className="fifthRow">
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
+                    <MentalSpecialtiesComp reroll={reroll} perceptionProp={heroStats.mechanicalStats.perception} />
+                </div>
+                <div className="sixthRow">
+                    <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
+                    <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
+                    <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
+                    <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
+                    <EquipmentComponent reroll={reroll} />
+                </div>
 
             </div>
         </div>

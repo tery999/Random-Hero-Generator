@@ -320,231 +320,238 @@ export function MentalSpecialtiesFunc(props: any) {
 
     console.log("SPEC ARE", specialties)
     return (
-        <div>
+        <div className="MentalSpecialtiesStatHolder">
             <h2>Ментални Специалности</h2>
             <h4 className="specialtyPoints">{totalPoints} / {perceptionProp}</h4>
-            <div className="singleSpecHolder">
-                <p>Актьорско Майсторство</p>
-                <div>
-                    <img onClick={() => changeStatFunc("АктьорскоМайсторство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.АктьорскоМайсторство.points}</p>
-                    <img onClick={() => changeStatFunc("АктьорскоМайсторство", "inc")} src="/arrowRight.png" alt="" />
+            <div className="MentalBothRows">
+                <div className="MentalFirstRow">
+                    <div className="singleSpecHolder">
+                        <p>Актьорско Майсторство</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("АктьорскоМайсторство", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.АктьорскоМайсторство.points}</p>
+                            <img onClick={() => changeStatFunc("АктьорскоМайсторство", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Алхимия.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Алхимия", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Алхимия.points}</p>
+                            <img onClick={() => changeStatFunc("Алхимия", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Билкарство.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Билкарство", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Билкарство.points}</p>
+                            <img onClick={() => changeStatFunc("Билкарство", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Врачуване.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Врачуване", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Врачуване.points}</p>
+                            <img onClick={() => changeStatFunc("Врачуване", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Вяра.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Вяра", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Вяра.points}</p>
+                            <img onClick={() => changeStatFunc("Вяра", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Готвене.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Готвене", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Готвене.points}</p>
+                            <img onClick={() => changeStatFunc("Готвене", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Грамотност.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Грамотност", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Грамотност.points}</p>
+                            <img onClick={() => changeStatFunc("Грамотност", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>Дворянски Етикет</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("ДворянскиЕтикет", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.ДворянскиЕтикет.points}</p>
+                            <img onClick={() => changeStatFunc("ДворянскиЕтикет", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Заклинателство.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Заклинателство", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Заклинателство.points}</p>
+                            <img onClick={() => changeStatFunc("Заклинателство", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>Законът На Улицата</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("ЗаконътНаУлицата", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.ЗаконътНаУлицата.points}</p>
+                            <img onClick={() => changeStatFunc("ЗаконътНаУлицата", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Измама.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Измама", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Измама.points}</p>
+                            <img onClick={() => changeStatFunc("Измама", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Инженерство.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Инженерство", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Инженерство.points}</p>
+                            <img onClick={() => changeStatFunc("Инженерство", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Опитомяване.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Опитомяване", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Опитомяване.points}</p>
+                            <img onClick={() => changeStatFunc("Опитомяване", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="singleSpecHolder">
+                        <p>{specialties.Култура.name}</p>
+                        <div>
+                            <img onClick={() => changeStatFunc("Култура", "dec")} src="/arrowLeft.png" alt="" />
+                            <p className="points">{specialties.Култура.points}</p>
+                            <img onClick={() => changeStatFunc("Култура", "inc")} src="/arrowRight.png" alt="" />
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Алхимия.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Алхимия", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Алхимия.points}</p>
-                    <img onClick={() => changeStatFunc("Алхимия", "inc")} src="/arrowRight.png" alt="" />
+                <div className="MentalSecondRow">
+                <div className="singleSpecHolder">
+                    <p>{specialties.Медицина.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Медицина", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Медицина.points}</p>
+                        <img onClick={() => changeStatFunc("Медицина", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Билкарство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Билкарство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Билкарство.points}</p>
-                    <img onClick={() => changeStatFunc("Билкарство", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Наблюдателност.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Наблюдателност", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Наблюдателност.points}</p>
+                        <img onClick={() => changeStatFunc("Наблюдателност", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Врачуване.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Врачуване", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Врачуване.points}</p>
-                    <img onClick={() => changeStatFunc("Врачуване", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Навигация.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Навигация", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Навигация.points}</p>
+                        <img onClick={() => changeStatFunc("Навигация", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Вяра.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Вяра", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Вяра.points}</p>
-                    <img onClick={() => changeStatFunc("Вяра", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Ориентация.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Ориентация", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Ориентация.points}</p>
+                        <img onClick={() => changeStatFunc("Ориентация", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Готвене.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Готвене", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Готвене.points}</p>
-                    <img onClick={() => changeStatFunc("Готвене", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Ослушване.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Ослушване", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Ослушване.points}</p>
+                        <img onClick={() => changeStatFunc("Ослушване", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Грамотност.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Грамотност", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Грамотност.points}</p>
-                    <img onClick={() => changeStatFunc("Грамотност", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Пазарлък.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Пазарлък", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Пазарлък.points}</p>
+                        <img onClick={() => changeStatFunc("Пазарлък", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>Дворянски Етикет</p>
-                <div>
-                    <img onClick={() => changeStatFunc("ДворянскиЕтикет", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.ДворянскиЕтикет.points}</p>
-                    <img onClick={() => changeStatFunc("ДворянскиЕтикет", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Пеене.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Пеене", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Пеене.points}</p>
+                        <img onClick={() => changeStatFunc("Пеене", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Заклинателство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Заклинателство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Заклинателство.points}</p>
-                    <img onClick={() => changeStatFunc("Заклинателство", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Право.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Право", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Право.points}</p>
+                        <img onClick={() => changeStatFunc("Право", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>Законът На Улицата</p>
-                <div>
-                    <img onClick={() => changeStatFunc("ЗаконътНаУлицата", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.ЗаконътНаУлицата.points}</p>
-                    <img onClick={() => changeStatFunc("ЗаконътНаУлицата", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Проповедничество.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Проповедничество", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Проповедничество.points}</p>
+                        <img onClick={() => changeStatFunc("Проповедничество", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Измама.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Измама", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Измама.points}</p>
-                    <img onClick={() => changeStatFunc("Измама", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Пълководство.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Пълководство", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Пълководство.points}</p>
+                        <img onClick={() => changeStatFunc("Пълководство", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Инженерство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Инженерство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Инженерство.points}</p>
-                    <img onClick={() => changeStatFunc("Инженерство", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Ритуали.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Ритуали", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Ритуали.points}</p>
+                        <img onClick={() => changeStatFunc("Ритуали", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Опитомяване.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Опитомяване", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Опитомяване.points}</p>
-                    <img onClick={() => changeStatFunc("Опитомяване", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Самообладание.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Самообладание", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Самообладание.points}</p>
+                        <img onClick={() => changeStatFunc("Самообладание", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Култура.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Култура", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Култура.points}</p>
-                    <img onClick={() => changeStatFunc("Култура", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.Строителство.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("Строителство", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.Строителство.points}</p>
+                        <img onClick={() => changeStatFunc("Строителство", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Медицина.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Медицина", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Медицина.points}</p>
-                    <img onClick={() => changeStatFunc("Медицина", "inc")} src="/arrowRight.png" alt="" />
+                <div className="singleSpecHolder">
+                    <p>{specialties.ШестоЧувство.name}</p>
+                    <div>
+                        <img onClick={() => changeStatFunc("ШестоЧувство", "dec")} src="/arrowLeft.png" alt="" />
+                        <p className="points">{specialties.ШестоЧувство.points}</p>
+                        <img onClick={() => changeStatFunc("ШестоЧувство", "inc")} src="/arrowRight.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Наблюдателност.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Наблюдателност", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Наблюдателност.points}</p>
-                    <img onClick={() => changeStatFunc("Наблюдателност", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Навигация.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Навигация", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Навигация.points}</p>
-                    <img onClick={() => changeStatFunc("Навигация", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Ориентация.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Ориентация", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Ориентация.points}</p>
-                    <img onClick={() => changeStatFunc("Ориентация", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Ослушване.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Ослушване", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Ослушване.points}</p>
-                    <img onClick={() => changeStatFunc("Ослушване", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Пазарлък.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Пазарлък", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Пазарлък.points}</p>
-                    <img onClick={() => changeStatFunc("Пазарлък", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Пеене.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Пеене", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Пеене.points}</p>
-                    <img onClick={() => changeStatFunc("Пеене", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Право.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Право", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Право.points}</p>
-                    <img onClick={() => changeStatFunc("Право", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Проповедничество.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Проповедничество", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Проповедничество.points}</p>
-                    <img onClick={() => changeStatFunc("Проповедничество", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Пълководство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Пълководство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Пълководство.points}</p>
-                    <img onClick={() => changeStatFunc("Пълководство", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Ритуали.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Ритуали", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Ритуали.points}</p>
-                    <img onClick={() => changeStatFunc("Ритуали", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Самообладание.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Самообладание", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Самообладание.points}</p>
-                    <img onClick={() => changeStatFunc("Самообладание", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.Строителство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("Строителство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.Строителство.points}</p>
-                    <img onClick={() => changeStatFunc("Строителство", "inc")} src="/arrowRight.png" alt="" />
-                </div>
-            </div>
-            <div className="singleSpecHolder">
-                <p>{specialties.ШестоЧувство.name}</p>
-                <div>
-                    <img onClick={() => changeStatFunc("ШестоЧувство", "dec")} src="/arrowLeft.png" alt="" />
-                    <p className="points">{specialties.ШестоЧувство.points}</p>
-                    <img onClick={() => changeStatFunc("ШестоЧувство", "inc")} src="/arrowRight.png" alt="" />
                 </div>
             </div>
         </div>
