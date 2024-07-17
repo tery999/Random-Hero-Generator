@@ -1,3 +1,61 @@
+@media screen and (max-width: 450px) {
+    .statsDiv {
+        width: 100% !important;
+    }
+
+    .cornerDec {
+        width: 25% !important;
+    }
+
+    .mehanichniStatHolder {
+        width: 100% !important;
+    }
+
+    .PhysicalFirstRow {
+        width: 100% !important;
+    }
+
+    .PhysicalSecondRow {
+        width: 100% !important;
+    }
+
+    .MentalFirstRow {
+        width: 100% !important;
+    }
+
+    .MentalSecondRow {
+        width: 100% !important;
+    }
+
+    .forthRow {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .singleSpecHolder {
+        padding-right: 10px !important;
+    }
+
+    .fifthRow {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .allEquipment {
+        justify-content: start !important;
+        flex-direction: column !important;
+    }
+
+    .questionMark:hover ~ .hiddenEquipment {
+
+        width: 100% !important;
+        left: -20px !important;
+        bottom: 100px !important;
+
+    }
+  }
+
+
 .container {
     display: flex;
     flex-direction: column;
