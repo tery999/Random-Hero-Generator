@@ -183,6 +183,7 @@ export default function Quick() {
                         <p> Цели: {heroStats.worldView.aims}</p>
                         <p> Опасения: {heroStats.worldView.concerns}</p>
                     </div>
+                    <img className="lionPic" src="/lionImage.png" alt="" />
                 </div>
                 <div className="secondRow">
                     <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
