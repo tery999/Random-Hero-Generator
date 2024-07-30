@@ -1,4 +1,5 @@
 @media screen and (max-width: 450px) {
+
     .statsDiv {
         width: 100% !important;
     }
@@ -46,32 +47,88 @@
         flex-direction: column !important;
     }
 
-    .questionMark:hover ~ .hiddenEquipment {
+    .questionMark:hover~.hiddenEquipment {
 
         width: 100% !important;
         left: -20px !important;
         bottom: 100px !important;
 
     }
-  }
-  @media screen and (max-width: 1043px) {
+}
+
+@media screen and (max-width: 1043px) {
     .lionPic {
         position: relative !important;
-        right:  0px !important;
+        right: 0px !important;
         bottom: 0px !important;
         padding-top: 90px !important;
     }
-  }
+}
 
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 970px) {
+    .ricarNaKon {
+        position: absolute;
+        width: 35% !important;
+        top: 140px;
+        right: 0px !important;
+
+    }
+}
+
+@media screen and (max-width: 970px) and (min-width: 700px){
+
+    .RodP {
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
     .lionPic {
         position: relative !important;
-        right:  0px !important;
+        right: 0px !important;
         bottom: 0px !important;
         padding-top: 10px !important;
         width: 70% !important;
     }
-  }
+
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 20px !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    h2 {
+        font-size: 25px !important;
+    }
+
+    .ricarNaKon {
+        position: relative !important;
+        width: 50% !important;
+        top: 0px !important;
+        right: 0px !important;
+
+    }
+
+    .ricatNaKonTwo {
+        width: 50% !important;
+    }
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 350px) { 
+    .mehanichniStatHolder div {
+        padding-left: 30px !important;
+    }
+}
+
+p {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
 
 
 .container {
@@ -124,6 +181,7 @@
     align-items: start;
     border: 2px solid black;
     padding: 30px;
+    padding-bottom: 80px;
 }
 
 .secondRow {
@@ -141,6 +199,19 @@
     max-width: 1023px;
 }
 
+.ricarNaKon {
+    position: absolute;
+    width: 350px;
+    top: 140px;
+    right: 50px;
+}
+
+.ricatNaKonTwo {
+    position: relative;
+    width: 250px;
+    padding-left: 20px;
+}
+
 .thirdRow {
     box-sizing: border-box;
     position: relative;
@@ -154,7 +225,7 @@
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 30px;
-   width: 100%;
+    width: 100%;
 }
 
 .forthRow {
@@ -172,7 +243,8 @@
     width: 100%;
 }
 
-.fifthRow , .sixthRow{
+.fifthRow,
+.sixthRow {
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -213,22 +285,22 @@
     width: 120px;
 }
 
-.cornerDec.upRight{
+.cornerDec.upRight {
     right: 0px;
     top: 0px;
 }
 
-.cornerDec.upLeft{
+.cornerDec.upLeft {
     left: 0px;
     top: 0px;
 }
 
-.cornerDec.downLeft{
+.cornerDec.downLeft {
     left: 0px;
     bottom: 0px;
 }
 
-.cornerDec.downRight{
+.cornerDec.downRight {
     right: 0px;
     bottom: 0px;
 }
@@ -246,7 +318,7 @@
     font-size: 24px;
 }
 
- h2 {
+h2 {
     align-self: center;
     text-align: center;
 }
@@ -312,7 +384,7 @@
     justify-content: space-between;
 }
 
-.singleSpecHolder > div {
+.singleSpecHolder>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,7 +408,7 @@
     width: 24px;
 }
 
-.singleSpecHolder img:hover + .points {
+.singleSpecHolder img:hover+.points {
     margin-left: 4px;
 }
 
@@ -354,17 +426,20 @@
     margin-bottom: 5px;
 }
 
-.PhysicalSpecialtiesStatHolder, .MentalSpecialtiesStatHolder {
+.PhysicalSpecialtiesStatHolder,
+.MentalSpecialtiesStatHolder {
     display: flex;
     flex-direction: column;
 }
 
-.PhysicalSpecialtiesStatHolder p ,.MentalSpecialtiesStatHolder p {
+.PhysicalSpecialtiesStatHolder p,
+.MentalSpecialtiesStatHolder p {
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.PhysicalBothRows , .MentalBothRows {
+.PhysicalBothRows,
+.MentalBothRows {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -374,7 +449,8 @@
 
 }
 
-.PhysicalBothRows > div ,.MentalBothRows > div {
+.PhysicalBothRows>div,
+.MentalBothRows>div {
     width: 320px;
 }
 
@@ -418,7 +494,7 @@
     display: none;
 }
 
-.questionMark:hover ~ .hiddenEquipment {
+.questionMark:hover~.hiddenEquipment {
     padding-left: 10px;
     display: block;
     position: absolute;

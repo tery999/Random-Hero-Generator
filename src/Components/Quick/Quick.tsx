@@ -181,7 +181,7 @@ export default function Quick() {
                         <p> Нрав: {heroStats.worldView.character}</p>
                         <p> Призвание: {heroStats.worldView.calling}</p>
                         <p> Цели: {heroStats.worldView.aims}</p>
-                        <p> Опасения: {heroStats.worldView.concerns}</p>
+                        <p className="opasenia"> Опасения: {heroStats.worldView.concerns}</p>
                     </div>
                     <img className="lionPic" src="/lionImage.png" alt="" />
                 </div>
@@ -194,7 +194,7 @@ export default function Quick() {
                         <h2>Среда и положение</h2>
                         <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
                         <p> Положение: {heroStats.familyAndRelationships.wealth}</p>
-                        <p> Род: {heroStats.familyAndRelationships.familyReputation}</p>
+                        <p className="RodP"> Род: {heroStats.familyAndRelationships.familyReputation}</p>
                         <p> Семейство: {heroStats.familyAndRelationships.family}</p>
                         <p> Братя и сестри: {heroStats.familyAndRelationships.siblings}</p>
                         <p> Семейно положение: {heroStats.familyAndRelationships.relationshipStatus}</p>
@@ -204,6 +204,7 @@ export default function Quick() {
                         <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
                         <p className="TrudnostiIPostijeniqP"> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
                     </div>
+                    <img className="ricarNaKon" src="/ricarNaKon.png" alt="" />
                 </div>
                 <div className="thirdRow">
                     <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
@@ -229,8 +230,9 @@ export default function Quick() {
                             <p> Възприятие: {heroStats.mechanicalStats.perception}</p>
                         </div>
                     </div>
+                    {disadvantages.length === 0 && <img className="ricatNaKonTwo" src="/ricarNaKon2.png" alt="" /> }
                     <div className="nedostataciHolder">
-                        <h2>Недостатъци</h2>
+                        {disadvantages.length > 0 && <h2>Недостатъци</h2> }
                         {disadvantages.map((single) =>
                             <p>{single.name} {single.level}: {single.information}</p>
                         )}
