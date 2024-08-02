@@ -45,6 +45,7 @@
     .allEquipment {
         justify-content: start !important;
         flex-direction: column !important;
+        gap: 2px !important;
     }
 
     .questionMark:hover~.hiddenEquipment {
@@ -100,6 +101,12 @@
         margin-bottom: 10px !important;
     }
 
+    .true p {
+        font-size: 15px !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
     h2 {
         font-size: 25px !important;
     }
@@ -116,12 +123,29 @@
         width: 50% !important;
     }
 
+    .questionMark {
+        bottom: 20px !important;
+    }
+
 }
 
 @media screen and (max-width: 600px) and (min-width: 350px) { 
     .mehanichniStatHolder div {
         padding-left: 30px !important;
     }
+}
+
+.quick.true {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px ;
+}
+
+.true p {
+    font-size: 20px ;
+}
+
+.true h2 {
+    font-size: 28px !important;
 }
 
 p {
@@ -147,6 +171,7 @@ p {
     background-attachment: fixed;
 }
 
+
 .ParentContainer {
     position: relative;
     display: flex;
@@ -164,6 +189,7 @@ p {
 
 .containerInfo {
     display: flex;
+    position: relative;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -480,13 +506,14 @@ h2 {
 }
 
 .questionMark {
+    /* font-size: 25px !important; */
     cursor: pointer;
     margin-top: 2px;
     margin-bottom: 2px;
     position: relative;
     padding: 10px;
     left: 5px;
-    right: 5px;
+    bottom: 5px;
     font-size: 30px;
     color: rgb(106, 103, 103);
 }
@@ -517,5 +544,15 @@ h2 {
 .rogImg {
     width: 60%;
     min-width: 200px;
-    max-width: 400px;
+    max-width: 500px;
+}
+
+.changeFont {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    left: 0px;
+    top: -50px;
+    background-color: blanchedalmond;
+    border: 2px solid brown;
 }

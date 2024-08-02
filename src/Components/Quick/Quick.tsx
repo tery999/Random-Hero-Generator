@@ -18,6 +18,7 @@ import { EquipmentComponent } from "./Equipment"
 
 export default function Quick() {
     const [reroll, setReroll] = useState<boolean>(false);
+    const [readable, setReadable] = useState<boolean>(false);
     const [heroStats, setHeroStats] = useState<QuickHero>({
         gender: "",
         origin: "",
@@ -94,6 +95,10 @@ export default function Quick() {
 
     };
 
+    const changeFontFunc = () => {
+        setReadable( prev => !prev);
+    }
+
     const singleStatReroll = (statName: "strength" | "confidence" | "ability" | "perception") => {
         // debugger;
         const newValueRoll = mechSingleStats();
@@ -150,10 +155,13 @@ export default function Quick() {
     }
 
     return (
-        <div className="container quick">
+        <div className={`container quick ${readable}`}>
             <Link className="backLink" to="/">Назад</Link>
             <img className="dice" src={dice} alt="" onClick={rerollFunc} />
             <div className="containerInfo">
+               <button className="changeFont" onClick={changeFontFunc}>
+                Фонт
+               </button>
                 <div className="firstRow">
                     <img className="cornerDec upLeft" src="/CornerDecorationUpLeft.png" alt="" />
                     <img className="cornerDec upRight" src="/CornerDecorationUpRight.png" alt="" />
@@ -258,7 +266,7 @@ export default function Quick() {
                     <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
                     <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <EquipmentComponent reroll={reroll} />
-                    <img className="rogImg" src="rog.png" alt="" />
+                    <img className="rogImg" src="predmeti.png" alt="" />
                 </div>
 
             </div>
