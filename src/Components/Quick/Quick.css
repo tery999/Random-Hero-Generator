@@ -249,12 +249,13 @@ p {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     border: 2px solid black;
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 50px;
+    padding-left: 30px;
     padding-right: 30px;
     width: 100%;
     max-width: 1023px;
@@ -511,4 +512,10 @@ h2 {
     bottom: 60px;
     right: 55px;
     width: 300px;
+}
+
+.rogImg {
+    width: 60%;
+    min-width: 200px;
+    max-width: 400px;
 }
