@@ -266,7 +266,7 @@ export default function Quick() {
                     <img className="cornerDec downLeft" src="/CornerDecorationDownLeft.png" alt="" />
                     <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <EquipmentComponent reroll={reroll} />
-                    <img className="rogImg" src="predmeti.png" alt="" />
+                    <img className="rogImg" src="pileOfWeapons.png" alt="" />
                 </div>
 
             </div>
