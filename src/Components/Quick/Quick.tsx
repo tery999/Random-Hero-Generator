@@ -200,17 +200,17 @@ export default function Quick() {
                     <img className="cornerDec downRight" src="/CornerDecorationDownRight.png" alt="" />
                     <div className="sredaIpolojenieHolder">
                         <h2>Среда и положение</h2>
-                        <p> Среда: {heroStats.familyAndRelationships.surrounding}</p>
-                        <p> Положение: {heroStats.familyAndRelationships.wealth}</p>
-                        <p className="RodP"> Род: {heroStats.familyAndRelationships.familyReputation}</p>
-                        <p> Семейство: {heroStats.familyAndRelationships.family}</p>
+                        <p> Среда: {heroStats.familyAndRelationships.surrounding} .</p>
+                        <p> Положение: {heroStats.familyAndRelationships.wealth} .</p>
+                        <p className="RodP"> Род: {heroStats.familyAndRelationships.familyReputation} .</p>
+                        <p> Семейство: {heroStats.familyAndRelationships.family} .</p>
                         <p> Братя и сестри: {heroStats.familyAndRelationships.siblings}</p>
-                        <p> Семейно положение: {heroStats.familyAndRelationships.relationshipStatus}</p>
-                        <p> Очаквания и репутация: {heroStats.familyAndRelationships.ownReputation}</p>
-                        <p> Приятелства: {heroStats.familyAndRelationships.friendship}</p>
-                        <p> Вражди: {heroStats.familyAndRelationships.enemies}</p>
-                        <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
-                        <p className="TrudnostiIPostijeniqP"> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
+                        <p> Семейно положение: {heroStats.familyAndRelationships.relationshipStatus} .</p>
+                        <p> Очаквания и репутация: {heroStats.familyAndRelationships.ownReputation} .</p>
+                        <p> Приятелства: {heroStats.familyAndRelationships.friendship} .</p>
+                        <p> Вражди: {heroStats.familyAndRelationships.enemies} .</p>
+                        <p> Слухове: {heroStats.familyAndRelationships.rumors} .</p>
+                        <p className="TrudnostiIPostijeniqP"> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements} .</p>
                     </div>
                     <img className="ricarNaKon" src="/ricarNaKon.png" alt="" />
                 </div>
