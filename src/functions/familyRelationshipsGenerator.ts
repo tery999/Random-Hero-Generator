@@ -79,27 +79,27 @@ export function familyReputationGenerator(): string {
     const roll = diceRollFunction(100);
     switch (true) {
         case roll <= 10:
-            familyReputation = "произхождаш от прочут надлъж и нашир, ревностно почитан род"
+            familyReputation = "произхождаш от прочут надлъж и нашир, ревностно почитан род."
             break;
 
         case roll <= 25:
-            familyReputation = "родът ти е уважаван от мнозина"
+            familyReputation = "родът ти е уважаван от мнозина."
             break;
 
         case roll <= 50:
-            familyReputation = "почти никой не разпознава името на рода ти"
+            familyReputation = "почти никой не разпознава името на рода ти."
             break;
 
         case roll <= 75:
-            familyReputation = "произхождаш от незнаен и незабележителен род"
+            familyReputation = "произхождаш от незнаен и незабележителен род."
             break;
 
         case roll <= 90:
-            familyReputation = "родът ти е презиран от мнозина"
+            familyReputation = "родът ти е презиран от мнозина."
             break;
 
         case roll <= 100:
-            familyReputation = "родът ти е единодушно мразен почти навсякъде, където стъпиш"
+            familyReputation = "родът ти е единодушно мразен почти навсякъде, където стъпиш."
             break;
     }
 
@@ -113,27 +113,27 @@ export function siblingsGenerator(): string {
 
     switch (true) {
         case diceRollPosition <= 25:
-            siblings = `първо от ${Math.floor(diceRollSiblingsCount / 2) + 1} деца`;
+            siblings = `първо от ${Math.floor(diceRollSiblingsCount / 2) + 1} деца.`;
             break;
 
         case diceRollPosition <= 50:
-            siblings = `второ от ${Math.floor(diceRollSiblingsCount / 2) + 2} деца`;
+            siblings = `второ от ${Math.floor(diceRollSiblingsCount / 2) + 2} деца.`;
             break;
 
         case diceRollPosition <= 70:
-            siblings = `трето от ${Math.floor(diceRollSiblingsCount / 2) + 3} деца`;
+            siblings = `трето от ${Math.floor(diceRollSiblingsCount / 2) + 3} деца.`;
             break;
 
         case diceRollPosition <= 90:
-            siblings = `четвърто от ${Math.floor(diceRollSiblingsCount / 2) + 4} деца`;
+            siblings = `четвърто от ${Math.floor(diceRollSiblingsCount / 2) + 4} деца.`;
             break;
 
         case diceRollPosition <= 95:
-            siblings = `пето от ${Math.floor(diceRollSiblingsCount / 2) + 5} деца`;
+            siblings = `пето от ${Math.floor(diceRollSiblingsCount / 2) + 5} деца.`;
             break;
 
         case diceRollPosition <= 100:
-            siblings = `шесто от ${Math.floor(diceRollSiblingsCount / 2) + 6} деца`;
+            siblings = `шесто от ${Math.floor(diceRollSiblingsCount / 2) + 6} деца.`;
             break;
     }
 
@@ -195,7 +195,7 @@ export function reputationGenerator(surrounding: surrounding): string {
                 съвременници очакват да блеснеш с
                 изумително изобретение, откритие,
                 произведение на изкуството или влиятелна
-                поредица от писания`
+                поредица от писания.`
                 break;
 
             case surrounding === "простолюдие":
@@ -215,7 +215,7 @@ export function reputationGenerator(surrounding: surrounding): string {
         reputation = `малцина извън редовното ти
         обкръжение имат повод да те помнят с нещо
         особено, така че към теб няма необичайно
-        високи или ниски очаквания`
+        високи или ниски очаквания.`
     } else if (roll >= 76) {
         switch (true) {
             case surrounding === "дворянство":
@@ -286,11 +286,11 @@ export function familyGenerator(): string {
             const guardianRoll = diceRollFunction(100);
             switch (true) {
                 case guardianRoll <= 20:
-                    family += "Настойници - чичо и леля";
+                    family += "Настойници - чичо и леля.";
                     break;
 
                 case guardianRoll <= 30:
-                    family += "Настойник - само чичо";
+                    family += "Настойник - само чичо.";
                     break;
 
                 case guardianRoll <= 40:
@@ -302,23 +302,23 @@ export function familyGenerator(): string {
                     break;
 
                 case guardianRoll <= 70:
-                    family += "Настойник - само дядо";
+                    family += "Настойник - само дядо.";
                     break;
 
                 case guardianRoll <= 80:
-                    family += "Настойник - само баба";
+                    family += "Настойник - само баба.";
                     break;
 
                 case guardianRoll <= 90:
-                    family += "наставници без родствена връзка";
+                    family += "наставници без родствена връзка.";
                     break;
 
                 case guardianRoll <= 95:
-                    family += "наставник без родствена връзка";
+                    family += "наставник без родствена връзка.";
                     break;
 
                 case guardianRoll <= 100:
-                    family += "наставница без родствена връзка";
+                    family += "наставница без родствена връзка.";
                     break;
             }
         } else if (roll >= 71 && roll <= 80) {
@@ -329,11 +329,11 @@ export function familyGenerator(): string {
         const guardianRoll = diceRollFunction(100);
         switch (true) {
             case guardianRoll <= 20:
-                family += "Настойници - чичо и леля";
+                family += "Настойници - чичо и леля.";
                 break;
 
             case guardianRoll <= 30:
-                family += "Настойник - само чичо";
+                family += "Настойник - само чичо.";
                 break;
 
             case guardianRoll <= 40:
@@ -345,28 +345,28 @@ export function familyGenerator(): string {
                 break;
 
             case guardianRoll <= 70:
-                family += "Настойник - само дядо";
+                family += "Настойник - само дядо.";
                 break;
 
             case guardianRoll <= 80:
-                family += "Настойник - само баба";
+                family += "Настойник - само баба.";
                 break;
 
             case guardianRoll <= 90:
-                family += "наставници без родствена връзка";
+                family += "наставници без родствена връзка.";
                 break;
 
             case guardianRoll <= 95:
-                family += "наставник без родствена връзка";
+                family += "наставник без родствена връзка.";
                 break;
 
             case guardianRoll <= 100:
-                family += "наставница без родствена връзка";
+                family += "наставница без родствена връзка.";
                 break;
         }
 
     } else if (roll >= 91 && roll <= 100) {
-        family = "безпризорно дете"
+        family = "безпризорно дете."
     }
 
     return family
@@ -379,7 +379,7 @@ export function friendshipGenerator(surrounding: surrounding): string {
     const surroundingsInitial: surrounding[] = ["дворянство", "духовенство", "интелигенция", "простолюдие", "подземен свят"];
 
     if (roll >= 1 && roll <= 10) {
-        friends = "имаш множество верни другари в различни среди. ";
+        friends = "имаш множество верни другари в различни среди: ";
         let rolledSurroundings: surrounding[] = [];
         let numberOfSurroundingsRoll = diceRollFunction(10);
         let numberOfSurroundings = Math.ceil(numberOfSurroundingsRoll / 2);
@@ -395,18 +395,27 @@ export function friendshipGenerator(surrounding: surrounding): string {
         for (let i = numberOfFriends; i > 0; i--) {
             let surroundingFrRoll = diceRollFunctionZero(rolledSurroundings.length - 1)
             let returnedFriend = friendsFoesCombFunc(rolledSurroundings[surroundingFrRoll]);
-            friends += `${returnedFriend},`;
+            if ( i > 0 ) {
+                friends += `${returnedFriend}, `;
+            } else if ( i === 0) {
+                friends += `${returnedFriend}.`;
+            }
+
         }
 
     } else if (roll >= 11 && roll <= 40) {
-        friends = "имаш малко, но добри другари, винаги готови охотно да ти се притекат на помощ. ";
+        friends = "имаш малко, но добри другари, винаги готови охотно да ти се притекат на помощ: ";
 
         for (let i = 0; i < 3; i++) {
             let returnedFriend = friendsFoesCombFunc(surrounding);
-            friends += `${returnedFriend},`;
+            if ( i < 2 ) {
+                friends += `${returnedFriend}, `;
+            } else if ( i === 2) {
+                friends += `${returnedFriend}.`;
+            }
         }
     } else if (roll >= 41 && roll <= 80) {
-        friends = "имаш малцина истински приятели. "
+        friends = "имаш малцина истински приятели: "
         let rolledSurroundings: surrounding[] = [];
         for (let i = 0; i < 3; i++) {
             let randomSurroundingIndex = diceRollFunctionZero(surroundingsInitial.length - 1);
@@ -416,12 +425,16 @@ export function friendshipGenerator(surrounding: surrounding): string {
 
         for (let i = 0; i < 3; i++) {
             let returnedFriend = friendsFoesCombFunc(rolledSurroundings[i]);
-            friends += `${returnedFriend},`;
+            if ( i < 2 ) {
+                friends += `${returnedFriend}, `;
+            } else if ( i === 2) {
+                friends += `${returnedFriend}.`;
+            }
         }
     } else if (roll >= 81) {
-        friends = "имаш един-единствен другар на света. "
+        friends = "имаш един-единствен другар на света - "
         let returnedFriend = friendsFoesCombFunc(surrounding);
-        friends += `${returnedFriend}`;
+        friends += `${returnedFriend} .`;
     }
 
 
@@ -434,7 +447,7 @@ export function foesGenerator(): string {
     const surroundingsInitial: surrounding[] = ["дворянство", "духовенство", "интелигенция", "простолюдие", "подземен свят"];
 
     if (roll >= 1 && roll <= 5) {
-        foes = "имаш множество люти врагове в различни среди. "
+        foes = "имаш множество люти врагове в различни среди: "
         let rolledSurroundings: surrounding[] = [];
         for (let i = 0; i < 3; i++) {
             let randomSurroundingIndex = diceRollFunctionZero(surroundingsInitial.length - 1);
@@ -448,10 +461,15 @@ export function foesGenerator(): string {
         for (let i = numberOfFoes; i > 0; i--) {
             let surroundingFoesRoll = diceRollFunctionZero(rolledSurroundings.length - 1)
             let returnedFoe = friendsFoesCombFunc(rolledSurroundings[surroundingFoesRoll]);
-            foes += `${returnedFoe},`;
+
+            if ( i !== 1) {
+                foes += `${returnedFoe}, `;
+            } else if ( i === 1) {
+                foes += `${returnedFoe}.`;
+            }
         }
     } else if (roll >= 6 && roll <= 20) {
-        foes = "имаш малко, но опасни врагове. "
+        foes = "имаш малко, но опасни врагове: "
         let rolledSurroundings: surrounding[] = [];
         let randomSurroundingIndex = diceRollFunctionZero(surroundingsInitial.length - 1);
         let removedSurrounding = surroundingsInitial.splice(randomSurroundingIndex, 1);
@@ -463,10 +481,17 @@ export function foesGenerator(): string {
         for (let i = 0; i < numberOfFoes; i++) {
             let returnedFoe = friendsFoesCombFunc(rolledSurroundings[0]);
             foes += `${returnedFoe},`
+
+            
+            if ( i < numberOfFoes-1) {
+                foes += `${returnedFoe}, `;
+            } else if ( i < numberOfFoes) {
+                foes += `${returnedFoe}.`;
+            }
         }
 
     } else if (roll >= 21 && roll <= 60) {
-        foes = "имаш един-единствен противник, който обаче не е за подценяване. ";
+        foes = "имаш един-единствен противник, който обаче не е за подценяване - ";
         const surrounding = diceRollFunctionZero(4);
 
         let rolledSurroundings: surrounding[] = [];
@@ -608,7 +633,7 @@ export function rumorGenerator(): string {
                     break;
 
                 case truthfullnesRoll <= 75:
-                    truthfullnes = "ала това е само отчасти вярно и си има обяснение. Явно има недоразумение."
+                    truthfullnes = ",ала това е само отчасти вярно и си има обяснение. Явно има недоразумение."
                     break;
 
                 case truthfullnesRoll <= 100:
