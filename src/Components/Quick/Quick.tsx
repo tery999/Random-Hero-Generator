@@ -65,6 +65,7 @@ export default function Quick() {
     const [disadvantages, setDisadvantages] = useState<nedostataciInterface[]>([]);
 
     useEffect(() => {
+        console.log("REROLL ON MAIN PAGE USE EFFECT");
         const genderGen = genderGenerator();
         const origin = originGenerator("quick");
         const society = societyGenerator();
@@ -79,6 +80,7 @@ export default function Quick() {
         const concerns = concernsGenerator();
         const mechanicalStats = mechStatGenerator() as mechanicStats;
         const familyAndRelationships = familyAndRelationshipsCombined(age, mechanicalStats);
+        console.log("REROLL ON MAIN PAGE , SURR IS", familyAndRelationships.surrounding);
         setHeroStats((prev) => ({
             ...prev, gender: genderGen, origin: origin,
             society: society, name: name, age: age, appearance: appearance,
@@ -88,6 +90,8 @@ export default function Quick() {
             }, familyAndRelationships, mechanicalStats
         }))
     }, [reroll])
+    console.log("REROLL ON MAIN PAGE");
+  
 
     const rerollFunc = () => {
         setReroll(prev => !prev);

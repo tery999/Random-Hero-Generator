@@ -2093,3 +2093,36 @@ export interface EquipmentInt {
     Price?: string,
     Information:string
 }
+
+
+export type DvoryanClothes = {
+    Name: "Дворянско облекло" ,
+    Price: "50Ж",
+    Information: "Изящни одежди от фини платове и аксесоари от скъпи кожи."
+}
+
+export type DuhClothes = {
+    Name: "Духовническо облекло" ,
+    Price: "50С",
+    Information: "Скромни дрехи, подходящи за свещенослужения и отшелнически живот."
+}
+
+export type IntClothes = {
+    Name: "Ексцентрично облекло" ,
+    Price: "10Ж",
+    Information: "Разноцветни одежди, типично носени от артисти и изследователи на естествения свят."
+}
+
+export type ProstClothes = {
+    Name: "Просто облекло" ,
+    Price: "10С",
+    Information: "Обикновени и практични дрехи, носени предимно от земледелци, занаятчии и други представители на простолюдието."
+}
+
+export type CrimClother = {
+    Name: "Неугледно облекло" ,
+    Price: "10К",
+    Information: "Тъмни, дрипави дрехи, присъщи за членовете на подземния свят."
+}
+
+
