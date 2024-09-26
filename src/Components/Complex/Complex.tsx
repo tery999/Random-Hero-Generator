@@ -12,6 +12,8 @@ import { FamilyNRelationshipComplex } from "./SubComplexes/FamilyNRelationshipCo
 import { MechStatsComplex } from "./SubComplexes/MechStatsComplex"
 import { MechStatNames } from "../../functions/mechStatGenerator"
 import { DisadvantagesComplex } from "./SubComplexes/DIsadvantagesComplex"
+import { MentalSpecialtiesCompex } from "./SubComplexes/MentalSpecialtiesComplex"
+import { MentalSpecialtiesComp } from "../Quick/MentalSpecialties"
 
 
 export function Complex() {
@@ -39,6 +41,7 @@ export function Complex() {
 
     //used for generator in familyNRelations
     const [mechLowHigh, setMechLowHigh] = useState<MechStatNames[]>([]);
+    console.log( mechLowHigh , "THIS HERE ");
     const changeMechLowHigh = useCallback( (changedData: MechStatNames[]) => {
         setMechLowHigh(changedData)
     },[])
@@ -55,6 +58,10 @@ export function Complex() {
             setNumberOfDisadvantagesPhysic((prev) => prev+1)
         }
     },[])
+
+    //change ability and perception
+    const [ability, setAbility] = useState(0);
+    const [perception, setPerception] = useState(0);
 
 
 
@@ -91,6 +98,8 @@ export function Complex() {
             <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} />
 
             <DisadvantagesComplex numberOfDisadvantagesPhysic={numberOfDisadvantagesPhysic} numberOfDisadvantagesMental={numberOfDisadvantagesMental}  />
+
+            <MentalSpecialtiesComp />
         </div>
     )
 }
