@@ -146,7 +146,7 @@ function MentalSpecialtiesComplexFunc(props: any) {
         }
     };
     console.log("Specialities check");
-    const perceptionProp = 5;
+    const perceptionProp = props.perceptionProp;
     const [totalPoints, setTotalPoints] = useState(0);
     const [specialties, setSpecialties] = useState<MentalpecialtiesInt>({
         АктьорскоМайсторство: {

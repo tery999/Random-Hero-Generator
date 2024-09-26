@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { mechanicStats } from "../../../Interfaces/QuickHero";
 import { mechSingleStats, mechStatGenerator, mechStatLowHigh } from "../../../functions/mechStatGenerator";
 import dice from "../../../../public/441965163_472462378601661_2030822002986090823_n.png"
@@ -6,6 +6,7 @@ import dice from "../../../../public/441965163_472462378601661_20308220029860908
 export function MechStatsComplex(props: any) {
     const changeMechLowHigh = props.changeMechLowHigh
     const changenumberOfDisadvantages = props.changenumberOfDisadvantages;
+    const changePerceptionFunc = props.changePerceptionFunc;
     const [mechStats, setMechStats] = useState<mechanicStats>({
         strength: 0,
         confidence: 0,
@@ -41,6 +42,10 @@ export function MechStatsComplex(props: any) {
         }
 
     }
+
+    useEffect( ()=> {
+        changePerceptionFunc(mechStats.perception);
+    } , [mechStats] )
 
     return (
         <div className="MechStatHolder">

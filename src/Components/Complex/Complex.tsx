@@ -13,7 +13,7 @@ import { MechStatsComplex } from "./SubComplexes/MechStatsComplex"
 import { MechStatNames } from "../../functions/mechStatGenerator"
 import { DisadvantagesComplex } from "./SubComplexes/DIsadvantagesComplex"
 import { MentalSpecialtiesCompex } from "./SubComplexes/MentalSpecialtiesComplex"
-import { MentalSpecialtiesComp } from "../Quick/MentalSpecialties"
+
 
 
 export function Complex() {
@@ -63,6 +63,14 @@ export function Complex() {
     const [ability, setAbility] = useState(0);
     const [perception, setPerception] = useState(0);
 
+    const changeAbilityFunc = useCallback( (curAbility:number) => {
+        setAbility(curAbility);
+    },[]);
+
+    const changePerceptionFunc = useCallback((curAbility:number) => {
+        setPerception(curAbility);
+    },[]);
+
 
 
 
@@ -93,13 +101,13 @@ export function Complex() {
 
             <WorldviewComplex />
 
-            <MechStatsComplex changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
+            <MechStatsComplex changePerceptionFunc={changePerceptionFunc} changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
 
             <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} />
 
             <DisadvantagesComplex numberOfDisadvantagesPhysic={numberOfDisadvantagesPhysic} numberOfDisadvantagesMental={numberOfDisadvantagesMental}  />
 
-            <MentalSpecialtiesComp />
+            <MentalSpecialtiesCompex changePerceptionFunc={changePerceptionFunc} perceptionProp = {perception} />
         </div>
     )
 }
