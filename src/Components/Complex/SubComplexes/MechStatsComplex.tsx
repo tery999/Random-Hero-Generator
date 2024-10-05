@@ -7,6 +7,7 @@ export function MechStatsComplex(props: any) {
     const changeMechLowHigh = props.changeMechLowHigh
     const changenumberOfDisadvantages = props.changenumberOfDisadvantages;
     const changePerceptionFunc = props.changePerceptionFunc;
+    const changeAbilityFunc= props.changeAbilityFunc;
     const [mechStats, setMechStats] = useState<mechanicStats>({
         strength: 0,
         confidence: 0,
@@ -45,6 +46,7 @@ export function MechStatsComplex(props: any) {
 
     useEffect( ()=> {
         changePerceptionFunc(mechStats.perception);
+        changeAbilityFunc(mechStats.ability);
     } , [mechStats] )
 
     return (

@@ -13,6 +13,8 @@ import { MechStatsComplex } from "./SubComplexes/MechStatsComplex"
 import { MechStatNames } from "../../functions/mechStatGenerator"
 import { DisadvantagesComplex } from "./SubComplexes/DIsadvantagesComplex"
 import { MentalSpecialtiesCompex } from "./SubComplexes/MentalSpecialtiesComplex"
+import { PhysicalSpecialtiesComp } from "../Quick/PhysicalSpecialties"
+import { PhysicalSpecialtiesCompex } from "./SubComplexes/PhysicalSpecialtiesComplex"
 
 
 
@@ -51,7 +53,7 @@ export function Complex() {
     const [numberOfDisadvantagesMental, setNumberOfDisadvantagesMental] = useState(0);
     console.log("DISADVANTAGES COUNT", numberOfDisadvantagesMental , numberOfDisadvantagesPhysic)
     const changenumberOfDisadvantages = useCallback( (disadvantage:"mental"|"physical") => {
-        debugger;
+        // debugger;
         if (disadvantage === "mental") {
             setNumberOfDisadvantagesMental((prev) => prev+1)
         } else {
@@ -101,13 +103,15 @@ export function Complex() {
 
             <WorldviewComplex />
 
-            <MechStatsComplex changePerceptionFunc={changePerceptionFunc} changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
+            <MechStatsComplex changeAbilityFunc={changeAbilityFunc} changePerceptionFunc={changePerceptionFunc} changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
 
             <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} />
 
             <DisadvantagesComplex numberOfDisadvantagesPhysic={numberOfDisadvantagesPhysic} numberOfDisadvantagesMental={numberOfDisadvantagesMental}  />
 
             <MentalSpecialtiesCompex changePerceptionFunc={changePerceptionFunc} perceptionProp = {perception} />
+
+            <PhysicalSpecialtiesCompex changeAbilityFunc={changeAbilityFunc} abilityProp = {ability} />
         </div>
     )
 }

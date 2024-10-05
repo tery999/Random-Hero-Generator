@@ -4,7 +4,7 @@ import {  age, familyAndRelationships } from "../../../Interfaces/QuickHero";
 import { DiffAndAch, familyGenerator, familyReputationGenerator, foesGenerator, friendshipGenerator, relationshipStatusFunc, reputationGenerator, rumorGenerator, siblingsGenerator, surroundingGenerator, wealthGenerator } from "../../../functions/familyRelationshipsGenerator";
 
 export function FamilyNRelationshipFunc(props:any) {
-    debugger;
+    // debugger;
     const age:age = props.age;
     const mechLowHigh = props.mechLowHigh;
     const [familyStats, setFamilyStats] = useState<familyAndRelationships>({
