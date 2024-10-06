@@ -13,8 +13,8 @@ import { MechStatsComplex } from "./SubComplexes/MechStatsComplex"
 import { MechStatNames } from "../../functions/mechStatGenerator"
 import { DisadvantagesComplex } from "./SubComplexes/DIsadvantagesComplex"
 import { MentalSpecialtiesCompex } from "./SubComplexes/MentalSpecialtiesComplex"
-import { PhysicalSpecialtiesComp } from "../Quick/PhysicalSpecialties"
 import { PhysicalSpecialtiesCompex } from "./SubComplexes/PhysicalSpecialtiesComplex"
+import { EquipmentComplexComponent } from "./SubComplexes/EquipmentComplex"
 
 
 
@@ -112,6 +112,9 @@ export function Complex() {
             <MentalSpecialtiesCompex changePerceptionFunc={changePerceptionFunc} perceptionProp = {perception} />
 
             <PhysicalSpecialtiesCompex changeAbilityFunc={changeAbilityFunc} abilityProp = {ability} />
+
+            <EquipmentComplexComponent />
+
         </div>
     )
 }
