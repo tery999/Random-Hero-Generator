@@ -7,6 +7,7 @@ export function FamilyNRelationshipFunc(props:any) {
     // debugger;
     const age:age = props.age;
     const mechLowHigh = props.mechLowHigh;
+    const changeSurroundingFunc = props.changeSurroundingFunc;
     const [familyStats, setFamilyStats] = useState<familyAndRelationships>({
         surrounding: "",
         wealth: "",
@@ -44,6 +45,10 @@ export function FamilyNRelationshipFunc(props:any) {
     setFamilyStats((prev) => {
         return ({ ...prev, ownReputation: "" , friendship: ""})
     })
+   },[familyStats.surrounding])
+
+   useEffect( ()=> {
+    changeSurroundingFunc(familyStats.surrounding)
    },[familyStats.surrounding])
 
     return (

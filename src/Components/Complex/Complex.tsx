@@ -73,6 +73,12 @@ export function Complex() {
         setPerception(curAbility);
     },[]);
 
+    //receive surrounding roll
+    const [surrounding, setSurrounding] = useState("");
+    const changeSurroundingFunc = useCallback( (curSurrounding:string) => {
+        setSurrounding(curSurrounding)
+    },[]);
+
 
 
 
@@ -105,7 +111,7 @@ export function Complex() {
 
             <MechStatsComplex changeAbilityFunc={changeAbilityFunc} changePerceptionFunc={changePerceptionFunc} changeMechLowHigh={changeMechLowHigh} changenumberOfDisadvantages={changenumberOfDisadvantages} />
 
-            <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} />
+            <FamilyNRelationshipComplex age={age} mechLowHigh={mechStatLowHigh} changeSurroundingFunc={changeSurroundingFunc} />
 
             <DisadvantagesComplex numberOfDisadvantagesPhysic={numberOfDisadvantagesPhysic} numberOfDisadvantagesMental={numberOfDisadvantagesMental}  />
 
@@ -113,7 +119,7 @@ export function Complex() {
 
             <PhysicalSpecialtiesCompex changeAbilityFunc={changeAbilityFunc} abilityProp = {ability} />
 
-            <EquipmentComplexComponent />
+            <EquipmentComplexComponent surrounding={surrounding} />
 
         </div>
     )
