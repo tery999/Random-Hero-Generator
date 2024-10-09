@@ -3,19 +3,25 @@ import { diceRollFunction, diceRollFunctionZero } from "../../../functions/utils
 import { CrimClother, DuhClothes, DvoryanClothes, Equipment, EquipmentInt, IntClothes, ProstClothes } from "../../../InformationObjects/Equipment";
 import { SubEquipment } from "../../Quick/SubEquipment";
 import { surrounding } from "../../../Interfaces/QuickHero";
+import dice from "../../../../public/441965163_472462378601661_2030822002986090823_n.png"
 
 function EquipmentComplexComponentFunc(props: any) {
     const surrounding: surrounding = props.surrounding;
     const [currentEquipment, setCurrentEquipment] = useState<EquipmentInt[]>();
+    const [ reroll, setReroll] = useState(false);
 
     console.log("EQUIPMENT COMP GENERATED")
-
 
     useEffect(() => {
         console.log("EQUIPMENT COMP IN USE EFFECT")
         const equipmentNumber = diceRollFunction(9);
         const allEquipment = Equipment;
         let equipmentArr = [];
+
+        if (surrounding === "") {
+            equipmentArr = [];
+            return;
+        }
 
         for (let i = 0; i <= equipmentNumber; i++) {
             let diceRollIndex = diceRollFunctionZero(allEquipment.length);
@@ -59,11 +65,12 @@ function EquipmentComplexComponentFunc(props: any) {
             equipmentArr.push(curClothe)
         }
         setCurrentEquipment(equipmentArr);
-    }, [])
+    }, [surrounding,reroll])
 
     return (
         <div className="equipmentDiv">
             <h2>Принадлежности</h2>
+            <img className="diceLogo" src={dice} alt="" onClick={ ()=>setReroll((reroll)=> !reroll)} />
             <div className="allEquipment">
                 {currentEquipment?.map((eq) => {
                     return <SubEquipment eq={eq} />
