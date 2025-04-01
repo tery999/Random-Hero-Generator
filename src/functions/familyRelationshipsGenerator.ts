@@ -63,7 +63,7 @@ export function wealthGenerator(): string {
             break;
 
         case roll <= 90:
-            wealth = "Нямаш имоти или владения"
+            wealth = "нямаш имоти или владения"
             break;
 
         case roll <= 100:

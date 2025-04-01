@@ -214,7 +214,7 @@ export default function Quick() {
                         <p> Приятелства: {heroStats.familyAndRelationships.friendship}</p>
                         <p> Вражди: {heroStats.familyAndRelationships.enemies}</p>
                         <p> Слухове: {heroStats.familyAndRelationships.rumors}</p>
-                        <p className="TrudnostiIPostijeniqP"> Трудности и Постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
+                        <p className="TrudnostiIPostijeniqP"> Трудности и постижения: {heroStats.familyAndRelationships.difficultiesAndAchievements}</p>
                     </div>
                     <img className="ricarNaKon" src="/ricarNaKon.png" alt="" />
                 </div>

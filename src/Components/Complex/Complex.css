@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../../public/antique-scroll-backgrounds.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .NarativeCont {

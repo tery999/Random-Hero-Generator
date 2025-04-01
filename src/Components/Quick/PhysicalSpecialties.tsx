@@ -221,7 +221,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
     console.log("SPEC ARE", specialties)
     return (
         <div className="PhysicalSpecialtiesStatHolder">
-            <h2>Физически Специалности</h2>
+            <h2>Практически Специалности</h2>
             <h4 className="specialtyPoints">{totalPoints} / {abilityProp}</h4>
             <div className="PhysicalBothRows">
                 <div className="PhysicalFirstRow">
@@ -250,7 +250,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
                         </div>
                     </div>
                     <div className="singleSpecHolder">
-                        <p>Едноръчни Ръкопашни Оръжия</p>
+                        <p>Едноръчни ръкопашни оръжия</p>
                         <div>
                             <img onClick={() => changeStatFunc("ЕдноръчниРъкопашниОръжия", "dec")} src="/arrowLeft.png" alt="" />
                             <p className="points">{specialties.ЕдноръчниРъкопашниОръжия.points}</p>
@@ -324,7 +324,7 @@ export function PhysicalSpecialtiesFunc(props: any) {
                         </div>
                     </div>
                     <div className="singleSpecHolder">
-                        <p>Селско Стопанство</p>
+                        <p>Селско стопанство</p>
                         <div>
                             <img onClick={() => changeStatFunc("СелскоСтопанство", "dec")} src="/arrowLeft.png" alt="" />
                             <p className="points">{specialties.СелскоСтопанство.points}</p>

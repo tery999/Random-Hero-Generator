@@ -321,12 +321,12 @@ export function MentalSpecialtiesFunc(props: any) {
     console.log("SPEC ARE", specialties)
     return (
         <div className="MentalSpecialtiesStatHolder">
-            <h2>Ментални Специалности</h2>
+            <h2>Теоритични специалности</h2>
             <h4 className="specialtyPoints">{totalPoints} / {perceptionProp}</h4>
             <div className="MentalBothRows">
                 <div className="MentalFirstRow">
                     <div className="singleSpecHolder">
-                        <p>Актьорско Майсторство</p>
+                        <p>Актьорско майсторство</p>
                         <div>
                             <img onClick={() => changeStatFunc("АктьорскоМайсторство", "dec")} src="/arrowLeft.png" alt="" />
                             <p className="points">{specialties.АктьорскоМайсторство.points}</p>
@@ -382,7 +382,7 @@ export function MentalSpecialtiesFunc(props: any) {
                         </div>
                     </div>
                     <div className="singleSpecHolder">
-                        <p>Дворянски Етикет</p>
+                        <p>Дворянски етикет</p>
                         <div>
                             <img onClick={() => changeStatFunc("ДворянскиЕтикет", "dec")} src="/arrowLeft.png" alt="" />
                             <p className="points">{specialties.ДворянскиЕтикет.points}</p>
@@ -398,7 +398,7 @@ export function MentalSpecialtiesFunc(props: any) {
                         </div>
                     </div>
                     <div className="singleSpecHolder">
-                        <p>Законът На Улицата</p>
+                        <p>Законът на улицата</p>
                         <div>
                             <img onClick={() => changeStatFunc("ЗаконътНаУлицата", "dec")} src="/arrowLeft.png" alt="" />
                             <p className="points">{specialties.ЗаконътНаУлицата.points}</p>
@@ -545,7 +545,7 @@ export function MentalSpecialtiesFunc(props: any) {
                     </div>
                 </div>
                 <div className="singleSpecHolder">
-                    <p>{specialties.ШестоЧувство.name}</p>
+                    <p>Шесто чувство</p>
                     <div>
                         <img onClick={() => changeStatFunc("ШестоЧувство", "dec")} src="/arrowLeft.png" alt="" />
                         <p className="points">{specialties.ШестоЧувство.points}</p>
